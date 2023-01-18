@@ -1,17 +1,23 @@
 public class Main {
     public static void main(String[] args) {
         // Oppg 2.1
+        System.out.println("Oppgave 2.1");
         System.out.println("Hello World!");
 
-        // Oppg 2.1
-        weight(70);
+        System.out.println();
+
+        // Oppg 2.2
+        System.out.println("Oppgave 2.2");
+        weight(75);
+
+        System.out.println();
     }
      // Oppg 2.2
-     public static void weight(float earthWeight){
-        float moonGravity = 0.17F;
-        float moonWeight = earthWeight * moonGravity;
+     public static void weight(double earthWeight){
+        double moonGravity = 0.17;
+        double moonWeight = earthWeight * moonGravity;
 
-         System.out.println("Vekt på jorden: " + earthWeight + "kg");
-         System.out.println("Vekt på månen: " + moonWeight + "kg");
+         System.out.println("Vekt på jorden(kg): " + earthWeight );
+         System.out.println("Vekt på månen(kg): " + moonWeight );
      }
 }
