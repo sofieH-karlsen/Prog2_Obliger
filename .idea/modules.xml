@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Prog2_Obliger.iml" filepath="$PROJECT_DIR$/Prog2_Obliger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prog2Obliger.iml" filepath="$PROJECT_DIR$/Prog2Obliger.iml" />
     </modules>
   </component>
 </project>

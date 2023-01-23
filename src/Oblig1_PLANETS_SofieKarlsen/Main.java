@@ -1,3 +1,5 @@
+package Oblig1_PLANETS_SofieKarlsen;
+
 public class Main {
     public static void main(String[] args) {
         // Oppg 2.1
