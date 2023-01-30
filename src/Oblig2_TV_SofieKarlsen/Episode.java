@@ -1,7 +1,7 @@
 package Oblig2_TV_SofieKarlsen;
 
-import java.time.LocalTime;
 
+//Oppgave 2.1
 public class Episode {
     private String tittel;
     private int episodeNr;
@@ -14,6 +14,11 @@ public class Episode {
         this.episodeNr = episodeNr;
         this.sesongNr = sesongNr;
         this.spilletid = spilletid;
+    }
+    public Episode(String tittel, int episodeNr, int sesongNr){
+        this.tittel = tittel;
+        this.episodeNr = episodeNr;
+        this.sesongNr = sesongNr;
     }
 
     public String getTittel() {
@@ -46,6 +51,13 @@ public class Episode {
 
     public void setSpilletid(int spilletid) {
         this.spilletid = spilletid;
+    }
+
+
+    // Oppgave 2.3
+    @Override
+    public String toString(){
+        return "\n Sesong: " + sesongNr + ", episode " + episodeNr + "\n Tittel: " + tittel + "\n Spilletid: " + spilletid + " minutter \n";
     }
 
 
