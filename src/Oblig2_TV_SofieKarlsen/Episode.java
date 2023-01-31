@@ -57,7 +57,7 @@ public class Episode {
     // Oppgave 2.3
     @Override
     public String toString(){
-        return "\n Sesong: " + sesongNr + ", episode " + episodeNr + "\n Tittel: " + tittel + "\n Spilletid: " + spilletid + " minutter \n";
+        return "\n\t Tittel: " + tittel + "\n\t Episode: " + episodeNr+ ", Sesong: " + sesongNr  + "\n\t Spilletid: " + spilletid + " minutter \n";
     }
 
 

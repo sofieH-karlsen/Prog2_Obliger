@@ -58,6 +58,19 @@ public class TvSerie {
     // Oppgave 2.3
     @Override
     public String toString(){
-        return "";
+        return tittel + "\n" + beskrivelse + "\n Utgitt: " + utgivelsesdato + "\n Episoder" + episoder;
     }
+
+    // Oppgave 2.4
+    public ArrayList<Episode> hentEpisoderISesong(int sesong){
+        ArrayList <Episode> episoderISesong = new ArrayList<>();
+        for(Episode enEpisode : episoder){
+            if(enEpisode.getSesongNr() == sesong){
+
+                episoderISesong.add(enEpisode);
+
+            }
+        }
+        return  episoderISesong;
+    };
 }
