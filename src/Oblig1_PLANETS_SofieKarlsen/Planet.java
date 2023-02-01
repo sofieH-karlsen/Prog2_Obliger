@@ -1,3 +1,5 @@
+package Oblig1_PLANETS_SofieKarlsen;
+
 public class Planet {
     // Oppgave 2.3
     private String navn;

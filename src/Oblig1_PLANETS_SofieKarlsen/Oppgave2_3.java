@@ -1,3 +1,5 @@
+package Oblig1_PLANETS_SofieKarlsen;
+
 public class Oppgave2_3 {
     // Neptun
     // WASP-39b

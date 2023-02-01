@@ -1,3 +1,5 @@
+package Oblig1_PLANETS_SofieKarlsen;
+
 import java.util.Scanner;
 //Bonus oppgave 3.1
 // https://www.w3schools.com/java/java_user_input.asp
