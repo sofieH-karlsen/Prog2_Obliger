@@ -13,9 +13,8 @@ public class TvSerie {
      float gjennomsnittligSekunder;
      int gjennomsnittMinutter;
 
+    private int antallSesonger;
 
-
-    //***
 
 
     public TvSerie(String tittel, String beskrivelse, LocalDate utgivelsesdato, ArrayList episoder){
@@ -26,15 +25,39 @@ public class TvSerie {
     }
 
    public void leggTilEpisode(Episode episode){
-        episoder.add(episode);
-        oppdaterGjennomsnittligSpilletid(episode);
+
+       if (episode.getSesongNr() == antallSesonger + 1) {
+           episoder.add(episode);
+           oppdaterGjennomsnittligSpilletid(episode);
+           antallSesonger = episode.getSesongNr();
+       }
+       else if (episode.getSesongNr() <= 0) {
+           System.out.println("Er ikke mulig å registrere episoder med sesongNr null eller lavere");
+       }
+       else if (episode.getSesongNr() <= antallSesonger) {
+           episoder.add(episode);
+           oppdaterGjennomsnittligSpilletid(episode);
+       }
+       else {
+           System.out.println("Går ikke ann å registrere episoder med sesongNr høyere enn " + (antallSesonger+1) + " på denne serien ");
+       }
    }
+
+    public ArrayList<Episode> hentEpisoderISesong(int sesong){
+        ArrayList <Episode> episoderISesong = new ArrayList<>();
+        for(Episode enEpisode : episoder){
+            if(enEpisode.getSesongNr() == sesong){
+                episoderISesong.add(enEpisode);
+            }
+        }
+        return  episoderISesong;
+    };
 
     private void oppdaterGjennomsnittligSpilletid(Episode ep){
         sumSpilletid += ep.getSpilletid();
         gjennomsnittMinutter = sumSpilletid / episoder.size();
         gjennomsnittligSekunder = ((sumSpilletid % episoder.size()) * 60) / episoder.size();
-        gjennomsnittligSpilletid = gjennomsnittMinutter + " minutes and " + gjennomsnittligSekunder + " seconds";
+        gjennomsnittligSpilletid = gjennomsnittMinutter + " minutter og " + gjennomsnittligSekunder + " sekunder";
 
         // System.out.println("\n Episode: " + ep.getTittel() + "\n Spilletid: "+ ep.getSpilletid() + "\n Total serie spilletid: " + sumSpilletid + "\n Gjennomsnitt " + gjennomsnittligSpilletid);
     };
@@ -78,23 +101,12 @@ public class TvSerie {
         return sumSpilletid;
     }
 
+    public int getAntallSesonger() {
+        return antallSesonger;
+    }
 
     @Override
     public String toString(){
         return tittel + "\n" + beskrivelse + "\n Utgitt: " + utgivelsesdato + "\n Episoder" + episoder;
     }
-
-    public ArrayList<Episode> hentEpisoderISesong(int sesong){
-        ArrayList <Episode> episoderISesong = new ArrayList<>();
-        for(Episode enEpisode : episoder){
-            if(enEpisode.getSesongNr() == sesong){
-
-                episoderISesong.add(enEpisode);
-
-            }
-        }
-        return  episoderISesong;
-    };
-
-
 }

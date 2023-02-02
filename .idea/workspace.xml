@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cabb22e9-b9cc-4edc-9d20-a5450ad92353" name="Changes" comment="Start oblig 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Oblig2_TV_SofieKarlsen/Episode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Oblig2_TV_SofieKarlsen/Episode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Oblig2_TV_SofieKarlsen/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Oblig2_TV_SofieKarlsen/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Oblig2_TV_SofieKarlsen/TvSerie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Oblig2_TV_SofieKarlsen/TvSerie.java" afterDir="false" />
     </list>

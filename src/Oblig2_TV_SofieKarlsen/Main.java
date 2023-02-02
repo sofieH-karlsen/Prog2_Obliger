@@ -31,10 +31,18 @@ public class Main {
 
 
         ArrayList <Episode> episoderSesong4 = new ArrayList<>(jjk.hentEpisoderISesong(4));
-        System.out.println("All episodes in season 4:\n" + episoderSesong4);
+        System.out.println("Alle episodene i sesong 4:\n" + episoderSesong4);
 
         System.out.println();
 
-        System.out.println("The Tv-series " + jjk.getTittel() + " has a total runtime of " + jjk.getSumSpilletid() + " minutes, there each episode has an average runtime of " + jjk.getGjennomsnittligSpilletid());
+        System.out.println("Tv-serien " + jjk.getTittel() + " har en total spilletid på " + jjk.getSumSpilletid() + " minutter, hvor episodene har en gjennomsnittlig spilletid på " + jjk.getGjennomsnittligSpilletid());
+
+        System.out.println();
+
+        csm.leggTilEpisode(new Episode("feil", 23, 6));
+        csm.leggTilEpisode(new Episode("feil", 23, 0));
+        jjk.leggTilEpisode(new Episode("feil", 11, 12));
+        jjk.leggTilEpisode(new Episode("Episode 21", 21, 5,random.nextInt(30 - 20) + 20));
+
     }
 }
