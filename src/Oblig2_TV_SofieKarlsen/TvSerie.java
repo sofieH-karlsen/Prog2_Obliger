@@ -2,13 +2,20 @@ package Oblig2_TV_SofieKarlsen;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-
-//Oppgave 2.1
 public class TvSerie {
     private String tittel;
     private String beskrivelse;
     private LocalDate utgivelsesdato;
     private ArrayList <Episode> episoder;
+
+    private String gjennomsnittligSpilletid;
+    private int sumSpilletid;
+     float gjennomsnittligSekunder;
+     int gjennomsnittMinutter;
+
+
+
+    //***
 
 
     public TvSerie(String tittel, String beskrivelse, LocalDate utgivelsesdato, ArrayList episoder){
@@ -20,8 +27,17 @@ public class TvSerie {
 
    public void leggTilEpisode(Episode episode){
         episoder.add(episode);
-
+        oppdaterGjennomsnittligSpilletid(episode);
    }
+
+    private void oppdaterGjennomsnittligSpilletid(Episode ep){
+        sumSpilletid += ep.getSpilletid();
+        gjennomsnittMinutter = sumSpilletid / episoder.size();
+        gjennomsnittligSekunder = ((sumSpilletid % episoder.size()) * 60) / episoder.size();
+        gjennomsnittligSpilletid = gjennomsnittMinutter + " minutes and " + gjennomsnittligSekunder + " seconds";
+
+        // System.out.println("\n Episode: " + ep.getTittel() + "\n Spilletid: "+ ep.getSpilletid() + "\n Total serie spilletid: " + sumSpilletid + "\n Gjennomsnitt " + gjennomsnittligSpilletid);
+    };
 
     public String getTittel() {
         return tittel;
@@ -55,13 +71,19 @@ public class TvSerie {
         this.episoder = episoder;
     }
 
-    // Oppgave 2.3
+    public String getGjennomsnittligSpilletid() {
+        return gjennomsnittligSpilletid;
+    }
+    public int getSumSpilletid() {
+        return sumSpilletid;
+    }
+
+
     @Override
     public String toString(){
         return tittel + "\n" + beskrivelse + "\n Utgitt: " + utgivelsesdato + "\n Episoder" + episoder;
     }
 
-    // Oppgave 2.4
     public ArrayList<Episode> hentEpisoderISesong(int sesong){
         ArrayList <Episode> episoderISesong = new ArrayList<>();
         for(Episode enEpisode : episoder){
@@ -73,4 +95,6 @@ public class TvSerie {
         }
         return  episoderISesong;
     };
+
+
 }

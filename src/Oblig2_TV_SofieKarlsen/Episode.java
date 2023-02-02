@@ -1,7 +1,5 @@
 package Oblig2_TV_SofieKarlsen;
 
-
-//Oppgave 2.1
 public class Episode {
     private String tittel;
     private int episodeNr;
@@ -54,10 +52,10 @@ public class Episode {
     }
 
 
-    // Oppgave 2.3
+
     @Override
     public String toString(){
-        return "\n\t Tittel: " + tittel + "\n\t Episode: " + episodeNr+ ", Sesong: " + sesongNr  + "\n\t Spilletid: " + spilletid + " minutter \n";
+        return "\n\tTittel: " + tittel + "\n\tEpisode: " + episodeNr+ ", Sesong: " + sesongNr  + "\n\tSpilletid: " + spilletid + " minutter \n";
     }
 
 
