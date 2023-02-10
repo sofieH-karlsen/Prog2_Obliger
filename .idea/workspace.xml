@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cabb22e9-b9cc-4edc-9d20-a5450ad92353" name="Changes" comment="Start oblig 2">
-      <change afterPath="$PROJECT_DIR$/src/Oblig3_FILM_SofieKarlsen/Episode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Oblig3_FILM_SofieKarlsen/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Oblig3_FILM_SofieKarlsen/Oblig2.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Oblig3_FILM_SofieKarlsen/Oblig3.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Oblig3_FILM_SofieKarlsen/TvSerie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Oblig3_FILM_SofieKarlsen/Film.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Oblig3_FILM_SofieKarlsen/Produksjon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Oblig3_FILM_SofieKarlsen/Episode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Oblig3_FILM_SofieKarlsen/Episode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="UML Sequence" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,6 +47,11 @@
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sofie\Code\HiØ\2023Vår\Prog2Obliger\src\Oblig3_FILM_SofieKarlsen" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

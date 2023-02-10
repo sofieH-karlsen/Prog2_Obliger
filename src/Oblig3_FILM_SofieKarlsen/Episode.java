@@ -1,31 +1,24 @@
 package Oblig3_FILM_SofieKarlsen;
 
-public class Episode {
-    private String tittel;
+public class Episode extends Produksjon{
     private int episodeNr;
     private int sesongNr;
-    private int spilletid;
 
 
     public Episode(String tittel, int episodeNr, int sesongNr, int spilletid){
-        this.tittel = tittel;
+        super(tittel,spilletid);
+
         this.episodeNr = episodeNr;
         this.sesongNr = sesongNr;
-        this.spilletid = spilletid;
+
     }
     public Episode(String tittel, int episodeNr, int sesongNr){
-        this.tittel = tittel;
+        super(tittel);
         this.episodeNr = episodeNr;
         this.sesongNr = sesongNr;
     }
 
-    public String getTittel() {
-        return tittel;
-    }
 
-    public void setTittel(String tittel) {
-        this.tittel = tittel;
-    }
 
     public int getEpisodeNr() {
         return episodeNr;
@@ -43,19 +36,13 @@ public class Episode {
         this.sesongNr = sesongNr;
     }
 
-    public int getSpilletid() {
-        return spilletid;
-    }
 
-    public void setSpilletid(int spilletid) {
-        this.spilletid = spilletid;
-    }
 
 
 
     @Override
     public String toString(){
-        return "\n\tTittel: " + tittel + "\n\tEpisode: " + episodeNr+ ", Sesong: " + sesongNr  + "\n\tSpilletid: " + spilletid + " minutter \n";
+        return "\n\tTittel: " + getTittel() + "\n\tEpisode: " + episodeNr+ ", Sesong: " + sesongNr  + "\n\tSpilletid: " + getSpilletid() + " minutter \n";
     }
 
 
