@@ -9,7 +9,7 @@ public class Main {
 
         Random random = new Random();
 
-
+/*
         TvSerie csm = new TvSerie("Chainsaw Man","Denji is a young boy who works as a Devil Hunter with the “Chainsaw Devil” Pochita. \nOne day he got betrayed and killed. \nAs he was losing his consciousness, he made a deal with Pochita, and got resurrected as the “Chainsaw Man”: the owner of the Devil’s heart.", LocalDate.of(2022,10,12),new ArrayList<Episode>() );
 
         csm.leggTilEpisode(new Episode("Dog & Chanisaw", 1, 1, 25 ));
@@ -43,6 +43,12 @@ public class Main {
         csm.leggTilEpisode(new Episode("feil", 23, 0));
         jjk.leggTilEpisode(new Episode("feil", 11, 12));
         jjk.leggTilEpisode(new Episode("Episode 21", 21, 5,random.nextInt(30 - 20) + 20));
+
+        */
+
+        Film kiki = new Film("Kiki's Delivery Service",103);
+        Film howl = new Film("Howl's Moving Castle",119);
+        System.out.println(kiki + "\n" + howl);
 
     }
 }
