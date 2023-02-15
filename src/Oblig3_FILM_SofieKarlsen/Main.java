@@ -31,19 +31,22 @@ public class Main {
                 1, 1, 25,LocalDate.of(2022,10,11),
                 new Person("Ryuu","Ryuu","1990"),new ArrayList<Rolle>());
 
-        csm.leggTilEpisode(csmEp1);
-
-        csm.leggTilEpisode(new Episode("Arrival in Tokyo","Denji arrives at the Devil Hunters Headquarters in Tokyo, and gets introduced to Aki Hayakawa, a senior hunter that he was supposed to partner with. But then Hayakawa beats Denji up, and demands that he “quit this job”...",
+        Episode csmEp2 = new Episode("Arrival in Tokyo","Denji arrives at the Devil Hunters Headquarters in Tokyo, and gets introduced to Aki Hayakawa, a senior hunter that he was supposed to partner with. But then Hayakawa beats Denji up, and demands that he “quit this job”...",
                 2, 1, 23,LocalDate.of(2022,10,18),
-                new Person("Touko","Yatabe","na"),new ArrayList<Rolle>()));
+                new Person("Touko","Yatabe","na"),new ArrayList<Rolle>());
 
-        csm.leggTilEpisode(new Episode("Meowy's Wherabouts",
+        Episode csmEp3 = new Episode("Meowy's Wherabouts",
                 "Denji decides that his new dream is. His partner, Power the Blood Fiend, offers to help him realise it, only if he rescues her old pet cat Meowy from a devil. With his dream in sight, Denji is all fired up and ready to go, until...",
                 3, 1, 23, LocalDate.of(2022,10,25),
-                new Person("Hironori","Tanaka","1984"),new ArrayList<Rolle>()));
+                new Person("Hironori","Tanaka","1984"),new ArrayList<Rolle>());
+
+
+        csm.leggTilEpisode(csmEp1);
+        csm.leggTilEpisode(csmEp2);
+        csm.leggTilEpisode(csmEp3);
 
         csm.leggTilEpisode(new Episode("Rescue","After a fierce battle, Denji defeats the “Bat Devil” and rescues Power even after she had trapped him. As Denji gets thrilled with the idea of his dream coming true, he faces a sudden attack from out of nowhere...",
-                4, 2,24,LocalDate.of(2022,11,1),yoshihara,new ArrayList<Rolle>()));
+                4, 2,24,LocalDate.of(2022,11,1),yoshihara,new ArrayList<>()));
 
 
         for (int s =1; s < 6 ; s++) {
@@ -72,14 +75,18 @@ public class Main {
         Rolle fiend = new Rolle("Power", "", ai);
         Rolle gun = new Rolle("Aki", "Hayakawa",sakata);
         ArrayList<Rolle> csmCast = new ArrayList<>();
-            
-
+            csmCast.add(sawBoi);
+            csmCast.add(fiend);
+            csmCast.add(gun);
 
         csmEp1.leggTilEnRolle(sawBoi);
         csmEp1.leggTilEnRolle(new Rolle("Pochita","", izawa));
+        csmEp2.leggTilMangeRoller(csmCast);
+        csmEp3.leggTilMangeRoller(csmCast);
 
-
-
+        /*
+        csm.getEpisoder().get(3).getRollebesetning;
+         */
 
 
         // Utskrifter / Tester
@@ -103,10 +110,11 @@ public class Main {
         jjk.leggTilEpisode(new Episode("Episode 21","Beskrivelse",21, 5,random.nextInt(30 - 20) + 20));
 
         System.out.println();
+        System.out.println();
 
         System.out.println(kikisDelivery + "\n" + howlsCastle);
 
-
+        System.out.println("Karakterer i Chainsaw Man\n" + csm.hentRollebesetning());
 
     }
 }

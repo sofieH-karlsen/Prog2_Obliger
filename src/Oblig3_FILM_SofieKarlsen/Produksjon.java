@@ -87,4 +87,7 @@ public class Produksjon {
         return rolleBesetning;
     }
 
+    public void setRolleBesetning(ArrayList<Rolle> rolleBesetning) {
+        this.rolleBesetning = rolleBesetning;
+    }
 }

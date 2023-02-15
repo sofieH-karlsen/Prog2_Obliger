@@ -34,4 +34,9 @@ public class Rolle {
     public void setSkuespiller(Person skuespiller) {
         this.skuespiller = skuespiller;
     }
+
+    @Override
+    public String toString() {
+        return "\n\"" + getRolleFornavn() + " " + getRolleEtternavn()+ "\" spilt av " + getSkuespiller()+"\n";
+    }
 }

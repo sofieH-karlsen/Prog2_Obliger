@@ -2,6 +2,7 @@ package Oblig3_FILM_SofieKarlsen;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+
 public class TvSerie {
     private String tittel;
     private String beskrivelse;
@@ -63,6 +64,14 @@ public class TvSerie {
     };
 
 
+    public ArrayList<Rolle> hentRollebesetning(){
+        ArrayList <Rolle> karaktererISerie = new ArrayList<>();
+        for(Episode enEpisode : episoder){
+            karaktererISerie.addAll(enEpisode.getRolleBesetning());
+        }
+
+        return  karaktererISerie;
+    };
 
     public String getTittel() {
         return tittel;

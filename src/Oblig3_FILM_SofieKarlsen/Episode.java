@@ -52,7 +52,7 @@ public class Episode extends Produksjon{
 
     @Override
     public String toString(){
-        return "\n\tTittel: " + getTittel() + "\n\tEpisode: " + episodeNr+ ", Sesong: " + sesongNr  + "\n\tSpilletid: " + getSpilletid() + " minutter \n\tBeskrivelse:\n\t\t\"" + getBeskrivelse()+ "\"\n\tRegissør: " + getRegissor() + "\n\tRollebesetning: \n\t"+ getRolleBesetning() +  "\n";
+        return "\nTittel: " + getTittel() + "\nEpisode: " + episodeNr+ ", Sesong: " + sesongNr  + "\nSpilletid: " + getSpilletid() + " minutter \n\t\"" + getBeskrivelse()+ "\"\nRegissør: " + getRegissor() + "\nRollebesetning: \n"+ getRolleBesetning() +  "\n";
     }
 
 
