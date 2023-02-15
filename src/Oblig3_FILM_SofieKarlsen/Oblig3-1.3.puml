@@ -4,7 +4,9 @@ Episode --|> Produksjon
 Film --|> Produksjon
 Rolle --|> Person
 TvSerie o-- Episode
+Produksjon o-- Rolle
 Produksjon --> Person
+Rolle --> Person
 
 class Episode {
 - episodeNr: int
@@ -27,7 +29,7 @@ gjennomsnittMinutter: int
 + leggTilEpisode(Episode episode): void
 + hentEpisoderISesong(int sesong): ArrayList<Episode>
 - oppdaterGjennomsnittligSpilletid(Episode ep): void
-+ hentRolleBesetning(TvSerie serie):ArrayList<Rolle>
++ hentRolleBesetning() :ArrayList<Rolle>
 }
 
 class Produksjon{
