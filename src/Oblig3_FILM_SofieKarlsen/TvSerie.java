@@ -62,6 +62,8 @@ public class TvSerie {
         // System.out.println("\n Episode: " + ep.getTittel() + "\n Spilletid: "+ ep.getSpilletid() + "\n Total serie spilletid: " + sumSpilletid + "\n Gjennomsnitt " + gjennomsnittligSpilletid);
     };
 
+
+
     public String getTittel() {
         return tittel;
     }
