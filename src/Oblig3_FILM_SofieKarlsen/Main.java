@@ -93,10 +93,9 @@ public class Main {
         System.out.println(csm);
         System.out.println();
 
-        /*
+
         ArrayList <Episode> episoderSesong4 = new ArrayList<>(jjk.hentEpisoderISesong(4));
         System.out.println("Alle episodene i sesong 4:\n" + episoderSesong4);
-        */
 
         System.out.println();
 
