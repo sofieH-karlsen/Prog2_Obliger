@@ -1,0 +1,63 @@
+@startuml
+
+Episode --|> Produksjon
+Film --|> Produksjon
+Rolle --|> Person
+TvSerie o-- Episode
+Produksjon o-- Rolle
+Produksjon --> Person
+Rolle --> Person
+
+class Episode {
+- episodeNr: int
+- sesongNr:int
+}
+
+class TvSerie{
+- tittel: String
+- beskrivelse: String
+- utgivelsesdato: Localdate
+- episoder: ArrayList <Episode>
+
+- gjennomsnittligSpilletid: String
+- sumSpilletid: int
+gjennomsnittligSekunder: float
+gjennomsnittMinutter: int
+
+- antallSesonger: int
+
++ leggTilEpisode(Episode episode): void
++ hentEpisoderISesong(int sesong): ArrayList<Episode>
+- oppdaterGjennomsnittligSpilletid(Episode ep): void
++ hentRolleBesetning() :ArrayList<Rolle>
+}
+
+class Produksjon{
+- tittel: String
+- spilletid:int
+- utgivelsesdato: Localdate
+- beskrivelse: String
+- regissor: Person
+- roller: ArrayList <Rolle>
+
++ leggTilEnRolle(Rolle enRolle): void
++ leggTilMangeRoller(ArrayList <Rolle> flereRoller): void
+}
+
+class Film{
+}
+
+class Person{
+- fornavn:String
+- etternavn: String
+- fodselsAr: int
+
++ getFullName():String
+}
+
+class Rolle {
+- rolleFornavn: String
+- rolleEtternavn: String
+- skuespiller: Person
+}
+@enduml
