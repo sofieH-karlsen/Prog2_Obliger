@@ -28,7 +28,7 @@ Episode:
         <div v-if="!episode.regissor" class="error">Produksjon må ha get-metode for "regissor"</div>
         <div v-if="episode.regissor && !episode.regissor.fulltNavn" class="error">Person må ha get-metode for "fulltNavn"</div>
 
-        <h1>S{{episode.sesongNummer}}E{{episode.episodeNummer}} - {{episode.tittel}}</h1>
+        <h1>S{{episode.sesongNr}}E{{episode.episodeNr}} - {{episode.tittel}}</h1>
         <img v-if="episode.bildeUrl" class="cover-image" v-bind:src="episode.bildeUrl">
         <img v-else class="cover-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Stranger_Things_Rasmiy_posteri.jpg/405px-Stranger_Things_Rasmiy_posteri.jpg">
         <br />

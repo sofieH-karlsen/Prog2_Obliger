@@ -13,16 +13,16 @@ public class TvSerieDataRepository implements TvSerieRepository{
 
         Episode csmEp1 = new Episode("Dog & Chainsaw","Denji is a teenager who lives his life as a Devil Hunter, to pay off his fathers debt, with his buddy, the chainsaw devil Pochita. He gets betrayed and killed by the yakuza. As Denji starts passing out, he hears someone calling from inside his head...",
                 1, 1, 25,LocalDate.of(2022,10,11),
-                new Person("Ryuu","Ryuu","1990"),new ArrayList<Rolle>());
+                new Person("Ryuu Nakayama","1990"),new ArrayList<Rolle>());
 
         Episode csmEp2 = new Episode("Arrival in Tokyo","Denji arrives at the Devil Hunters Headquarters in Tokyo, and gets introduced to Aki Hayakawa, a senior hunter that he was supposed to partner with. But then Hayakawa beats Denji up, and demands that he “quit this job”...",
                 2, 1, 23,LocalDate.of(2022,10,18),
-                new Person("Touko","Yatabe","na"),new ArrayList<Rolle>());
+                new Person("Touko Yatabe","na"),new ArrayList<Rolle>());
 
         Episode csmEp3 = new Episode("Meowy's Wherabouts",
                 "Denji decides that his new dream is. His partner, Power the Blood Fiend, offers to help him realise it, only if he rescues her old pet cat Meowy from a devil. With his dream in sight, Denji is all fired up and ready to go, until...",
                 3, 1, 23, LocalDate.of(2022,10,25),
-                new Person("Hironori","Tanaka","1984"),new ArrayList<Rolle>());
+                new Person("Hironori Tanaka","1984"),new ArrayList<Rolle>());
 
         csm.leggTilEpisode(csmEp1);
         csm.leggTilEpisode(csmEp2);
