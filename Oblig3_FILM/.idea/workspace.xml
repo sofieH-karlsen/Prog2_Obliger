@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09edf0b3-7fc3-4ede-86ec-f2f95aa3a12b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Oblig4_JAVALIN_SofieKarlsen/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Oblig4_JAVALIN_SofieKarlsen/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Oblig4_JAVALIN_SofieKarlsen/src/main/java/sofiehk/oblig/javalin/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Oblig4_JAVALIN_SofieKarlsen/src/main/java/sofiehk/oblig/javalin/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,13 +25,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/sofie/Code/HiØ/2023Vår/eksempelkode/dyrepark"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sofie/Code/HiØ/2023Vår/eksempelkode/dyrepark&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
