@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09edf0b3-7fc3-4ede-86ec-f2f95aa3a12b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Oblig4_JAVALIN_SofieKarlsen/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Oblig4_JAVALIN_SofieKarlsen/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Oblig4_JAVALIN_SofieKarlsen/src/main/java/sofiehk/oblig/javalin/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Oblig4_JAVALIN_SofieKarlsen/src/main/java/sofiehk/oblig/javalin/Application.java" afterDir="false" />
-    </list>
+    <list default="true" id="09edf0b3-7fc3-4ede-86ec-f2f95aa3a12b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
