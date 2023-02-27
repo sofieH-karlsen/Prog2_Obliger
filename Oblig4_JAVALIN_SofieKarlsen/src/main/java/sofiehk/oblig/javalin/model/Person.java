@@ -1,4 +1,4 @@
-
+package sofiehk.oblig.javalin.model;
 
 public class Person {
     private String fornavn;

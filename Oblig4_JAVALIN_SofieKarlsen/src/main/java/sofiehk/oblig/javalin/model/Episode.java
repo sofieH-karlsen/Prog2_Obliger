@@ -1,4 +1,4 @@
-
+package sofiehk.oblig.javalin.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

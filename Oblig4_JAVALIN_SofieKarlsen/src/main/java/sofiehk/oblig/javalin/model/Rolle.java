@@ -1,4 +1,4 @@
-
+package sofiehk.oblig.javalin.model;
 
 public class Rolle {
     private String rolleFornavn;
