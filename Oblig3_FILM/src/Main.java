@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
 
 public class Main {
@@ -39,12 +38,13 @@ public class Main {
                 3, 1, 23, LocalDate.of(2022,10,25),
                 new Person("Hironori","Tanaka","1984"),new ArrayList<Rolle>());
 
-        csm.leggTilEpisode(csmEp3);
-        csm.leggTilEpisode(csmEp1);
-        csm.leggTilEpisode(new Episode("Rescue","After a fierce battle, Denji defeats the “Bat Devil” and rescues Power even after she had trapped him. As Denji gets thrilled with the idea of his dream coming true, he faces a sudden attack from out of nowhere...",
-                4, 1,24,LocalDate.of(2022,11,1),yoshihara,new ArrayList<>()));
-        csm.leggTilEpisode(csmEp2);
 
+        csm.leggTilEpisode(csmEp1);
+        csm.leggTilEpisode(csmEp2);
+        csm.leggTilEpisode(csmEp3);
+
+        csm.leggTilEpisode(new Episode("Rescue","After a fierce battle, Denji defeats the “Bat Devil” and rescues Power even after she had trapped him. As Denji gets thrilled with the idea of his dream coming true, he faces a sudden attack from out of nowhere...",
+                4, 2,24,LocalDate.of(2022,11,1),yoshihara,new ArrayList<>()));
 
 
         for (int s =1; s < 6 ; s++) {
@@ -88,22 +88,30 @@ public class Main {
 
 
         // Utskrifter / Tester
-
-        ArrayList<Episode> csmEpisoder = new ArrayList<>(csm.getEpisoder());
-        Collections.sort(csmEpisoder);
-
-        System.out.println(csmEpisoder);
+        System.out.println(csm);
+        System.out.println();
 
 
-        ArrayList<TvSerie> serier = new ArrayList<>();
-        serier.add(jjk);
-        serier.add(csm);
-        serier.add(new TvSerie("Attack on Titan","After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.", LocalDate.of(2018,4,7),new ArrayList<Episode>()));
-        serier.add(new TvSerie("One Piece","The series focuses on Monkey D. Luffy, a young man made of rubber, who, inspired by his childhood idol, the powerful pirate Red-Haired Shanks, sets off on a journey from the East Blue Sea to find the mythical treasure, the One Piece, and proclaim himself the King of the Pirates", LocalDate.of(1999,10,20), new ArrayList<Episode>()));
+        ArrayList <Episode> episoderSesong4 = new ArrayList<>(jjk.hentEpisoderISesong(4));
+        System.out.println("Alle episodene i sesong 4:\n" + episoderSesong4);
 
-        Collections.sort(serier);
+        System.out.println();
 
-        System.out.println(serier);
+        System.out.println("Tv-serien " + jjk.getTittel() + " har en total spilletid på " + jjk.getSumSpilletid() + " minutter, hvor episodene har en gjennomsnittlig spilletid på " + jjk.getGjennomsnittligSpilletid());
+
+        System.out.println();
+
+        csm.leggTilEpisode(new Episode("feil","FEIL", 23, 6,20));
+        csm.leggTilEpisode(new Episode("feil","FEIL", 23, 0,20));
+        jjk.leggTilEpisode(new Episode("feil","FEIL", 11, 12,20));
+        jjk.leggTilEpisode(new Episode("Episode 21","Beskrivelse",21, 5,random.nextInt(30 - 20) + 20));
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println(kikisDelivery + "\n" + howlsCastle);
+
+        System.out.println("Karakterer i Chainsaw Man\n" + csm.hentRollebesetning());
 
     }
 }

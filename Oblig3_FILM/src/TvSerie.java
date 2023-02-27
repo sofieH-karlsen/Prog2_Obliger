@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class TvSerie implements Comparable<TvSerie>{
+public class TvSerie {
     private String tittel;
     private String beskrivelse;
     private LocalDate utgivelsesdato;
@@ -71,11 +71,6 @@ public class TvSerie implements Comparable<TvSerie>{
         return  karaktererISerie;
     };
 
-    @Override
-    public int compareTo(TvSerie serien) {
-        return this.tittel.compareTo(serien.getTittel());
-    }
-
     public String getTittel() {
         return tittel;
     }
@@ -121,8 +116,6 @@ public class TvSerie implements Comparable<TvSerie>{
 
     @Override
     public String toString(){
-        return "\n" + tittel + "\n" + beskrivelse + "\n Utgitt: " + utgivelsesdato + "\n";
+        return tittel + "\n" + beskrivelse + "\n Utgitt: " + utgivelsesdato + "\n Episoder" + episoder;
     }
-
-
 }

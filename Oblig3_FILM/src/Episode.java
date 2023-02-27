@@ -3,7 +3,7 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Episode extends Produksjon implements Comparable<Episode>{
+public class Episode extends Produksjon{
     private int episodeNr;
     private int sesongNr;
 
@@ -28,15 +28,7 @@ public class Episode extends Produksjon implements Comparable<Episode>{
         this.sesongNr = sesongNr;
     }
 
-    @Override
-    public int compareTo(Episode episoden) {
-        if(this.sesongNr - episoden.getSesongNr() == 0){
-            return this.episodeNr - episoden.getEpisodeNr();
-        } else{
-            return this.sesongNr - episoden.getSesongNr();
-        }
-        //https://stackoverflow.com/questions/4805606/how-to-sort-by-two-fields-in-java
-    }
+
 
     public int getEpisodeNr() {
         return episodeNr;
@@ -62,7 +54,6 @@ public class Episode extends Produksjon implements Comparable<Episode>{
     public String toString(){
         return "\nTittel: " + getTittel() + "\nEpisode: " + episodeNr+ ", Sesong: " + sesongNr  + "\nSpilletid: " + getSpilletid() + " minutter \n\t\"" + getBeskrivelse()+ "\"\nRegissør: " + getRegissor() + "\nRollebesetning: \n"+ getRolleBesetning() +  "\n";
     }
-
 
 
 }

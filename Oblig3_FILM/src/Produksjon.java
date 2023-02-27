@@ -3,7 +3,7 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public abstract class Produksjon {
+public class Produksjon {
     private String tittel;
     private String beskrivelse;
     private int spilletid;
