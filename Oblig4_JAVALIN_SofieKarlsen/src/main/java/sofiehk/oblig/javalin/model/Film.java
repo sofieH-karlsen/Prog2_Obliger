@@ -12,7 +12,7 @@ public class Film extends Produksjon {
 
     @Override
     public String toString(){
-        return "Tittel: " + getTittel() + "\n\t\"" + getBeskrivelse() + "\" \nUtgitt: " + getUtgivelsedato() + "\nSpilletid: " + getSpilletid() + " minutter" + "\nRegissør: " + getRegissor() + "\nRollebesetning:"+ getRolleBesetning() + "\n";
+        return "Tittel: " + getTittel() + "\n\t\"" + getBeskrivelse() + "\" \nUtgitt: " + getUtgivelsesdato() + "\nSpilletid: " + getSpilletid() + " minutter" + "\nRegissør: " + getRegissor() + "\nRollebesetning:"+ getRolleBesetning() + "\n";
     }
 
 }

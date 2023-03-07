@@ -20,6 +20,7 @@ public class Application {
 
         app.get("/tvserie",new VueComponent("tvserie-overview"));
         app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}",new VueComponent("tvserie-detail"));
+        app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}",new VueComponent("episode-detail"));
 
         TvSerieDataRepository tvSerieRepository = new TvSerieDataRepository();
         TvSerieController tvSerieController = new TvSerieController(tvSerieRepository);
@@ -35,6 +36,20 @@ public class Application {
             @Override
             public void handle(Context context){
                 tvSerieController.getTvSerie(context);
+            }
+        });
+
+        app.get("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}", new Handler() {
+            @Override
+            public void handle(Context context){
+                tvSerieController.getEpisoderISesong(context);
+            }
+        });
+
+        app.get("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}", new Handler() {
+            @Override
+            public void handle(Context context){
+                tvSerieController.getEpisode(context);
             }
         });
     }

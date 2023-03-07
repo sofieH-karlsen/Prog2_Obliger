@@ -13,8 +13,8 @@ Produksjon:
 - bildeUrl
 
 Episode:
-- episodeNummer
-- sesongNummer
+- episodeNr
+- sesongNr
 
  -->
 
@@ -62,14 +62,14 @@ Episode:
     <h2>Episoder i sesong {{sesongNr}}</h2>
 
     <div v-if="!episoder[0]?.tittel" class="error">Produksjon må ha get-metode for "tittel"</div>
-    <div v-if="!episoder[0]?.sesongNummer" class="error">Episode må ha get-metode for "sesongNummer"</div>
-    <div v-if="!episoder[0]?.episodeNummer" class="error">Episode må ha get-metode for "episodeNummer"</div>
+    <div v-if="!episoder[0]?.sesongNr" class="error">Episode må ha get-metode for "sesongNr"</div>
+    <div v-if="!episoder[0]?.episodeNr" class="error">Episode må ha get-metode for "episodeNr"</div>
 
     <ul class="episode-overview-list">
       <li v-for="episode in episoder">
-        <a v-if="tvserie" class="link-to-episode-details" :href="`/tvserie/${tvserie.tittel}/sesong/${episode.sesongNummer}/episode/${episode.episodeNummer}`">
+        <a v-if="tvserie" class="link-to-episode-details" :href="`/tvserie/${tvserie.tittel}/sesong/${episode.sesongNr}/episode/${episode.episodeNr}`">
           <div class="single-episode-container">
-            <h1>E{{episode.episodeNummer}} - {{episode.tittel}}</h1>
+            <h1>E{{episode.episodeNr}} - {{episode.tittel}}</h1>
             <img v-if="episode.bildeUrl" class="list-image" v-bind:src="episode.bildeUrl">
             <img v-else class="list-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Stranger_Things_Rasmiy_posteri.jpg/405px-Stranger_Things_Rasmiy_posteri.jpg">
           </div>

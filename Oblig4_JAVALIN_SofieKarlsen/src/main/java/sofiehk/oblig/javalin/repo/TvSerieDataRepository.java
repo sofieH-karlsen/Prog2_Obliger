@@ -64,4 +64,29 @@ public class TvSerieDataRepository implements TvSerieRepository{
         }
         return null;
     }
+
+    @Override
+    public ArrayList<Episode> getEpisoderISesong(String serieTittel, int sesong) {
+        ArrayList<Episode> epISerie = getTvSerie(serieTittel).getEpisoder();
+        ArrayList<Episode> episoderISesong = new ArrayList<>();
+
+        for (Episode ep : epISerie){
+            if (ep.getSesongNr() == sesong){
+                episoderISesong.add(ep);
+            }
+        }
+        return episoderISesong;
+    }
+
+    @Override
+    public Episode getEpisode(String serieTittel, int sesong, int episode) {
+        ArrayList<Episode> sesongEpisoder = getEpisoderISesong(serieTittel,sesong);
+
+        for (Episode ep : sesongEpisoder){
+            if (ep.getEpisodeNr() == episode){
+                return ep;
+            }
+        }
+        return null;
+    }
 }

@@ -11,8 +11,8 @@ Produksjon:
 - bildeUrl
 
 Episode:
-- episodeNummer
-- sesongNummer
+- episodeNr
+- sesongNr
 
  -->
 
@@ -20,8 +20,8 @@ Episode:
 <template id="episode-detail">
     <div v-if="episode" class="detail-episode-container">
         <div v-if="!episode.tittel" class="error">Produksjon må ha get-metode for "tittel"</div>
-        <div v-if="!episode.sesongNummer" class="error">Episode må ha get-metode for "sesongNummer"</div>
-        <div v-if="!episode.episodeNummer" class="error">Episode må ha get-metode for "episodeNummer"</div>
+        <div v-if="!episode.sesongNr" class="error">Episode må ha get-metode for "sesongNr"</div>
+        <div v-if="!episode.episodeNr" class="error">Episode må ha get-metode for "episodeNr"</div>
         <div v-if="!episode.spilletid" class="error">Produksjon må ha get-metode for "spilletid"</div>
         <div v-if="!episode.utgivelsesdato" class="error">Produksjon må ha get-metode for "utgivelsesdato"</div>
         <div v-if="!episode.beskrivelse" class="error">Produksjon må ha get-metode for "beskrivelse"</div>

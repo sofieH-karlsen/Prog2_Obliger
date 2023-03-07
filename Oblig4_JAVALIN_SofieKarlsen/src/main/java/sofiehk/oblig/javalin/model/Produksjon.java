@@ -7,7 +7,7 @@ public abstract class Produksjon {
     private String tittel;
     private String beskrivelse;
     private int spilletid;
-    private LocalDate utgivelsedato;
+    private LocalDate utgivelsesdato;
     private Person regissor;
     private ArrayList<Rolle> rolleBesetning;
 
@@ -20,11 +20,11 @@ public abstract class Produksjon {
     };
 
 // Konstruktører
-    public Produksjon(String tittel, String beskrivelse,int spilletid, LocalDate utgivelsedato, Person regissor,ArrayList<Rolle> rolleBesetning) {
+    public Produksjon(String tittel, String beskrivelse, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning) {
         this.tittel = tittel;
         this.beskrivelse = beskrivelse;
         this.spilletid = spilletid;
-        this.utgivelsedato = utgivelsedato;
+        this.utgivelsesdato = utgivelsesdato;
         this.regissor = regissor;
         this.rolleBesetning = rolleBesetning;
     }
@@ -46,12 +46,12 @@ public abstract class Produksjon {
         this.spilletid = spilletid;
     }
 
-    public LocalDate getUtgivelsedato() {
-        return utgivelsedato;
+    public LocalDate getUtgivelsesdato() {
+        return utgivelsesdato;
     }
 
-    public void setUtgivelsedato(LocalDate utgivelsedato) {
-        this.utgivelsedato = utgivelsedato;
+    public void setUtgivelsesdato(LocalDate utgivelsesdato) {
+        this.utgivelsesdato = utgivelsesdato;
     }
 
     public String getBeskrivelse() {
