@@ -4,6 +4,7 @@ import io.javalin.Javalin;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
 import io.javalin.vue.VueComponent;
+import sofiehk.oblig.javalin.controller.EpisodeController;
 import sofiehk.oblig.javalin.controller.TvSerieController;
 import sofiehk.oblig.javalin.repo.TvSerieDataRepository;
 
@@ -24,6 +25,7 @@ public class Application {
 
         TvSerieDataRepository tvSerieRepository = new TvSerieDataRepository();
         TvSerieController tvSerieController = new TvSerieController(tvSerieRepository);
+        EpisodeController episodeController = new EpisodeController(tvSerieRepository);
 
         app.get("/api/tvserie", new Handler() {
             @Override
@@ -42,14 +44,14 @@ public class Application {
         app.get("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}", new Handler() {
             @Override
             public void handle(Context context){
-                tvSerieController.getEpisoderISesong(context);
+                episodeController.getEpisoderISesong(context);
             }
         });
 
         app.get("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}", new Handler() {
             @Override
             public void handle(Context context){
-                tvSerieController.getEpisode(context);
+                episodeController.getEpisode(context);
             }
         });
     }

@@ -28,22 +28,5 @@ public class TvSerieController {
         context.json(tvSerie);
     }
 
-    public void getEpisoderISesong(Context context){
-        String serieTittel = context.pathParam("tvserie-id");
-        int sesong = Integer.parseInt(context.pathParam("sesong-nr"));
 
-        ArrayList<Episode> episoderISesong = tvSerieRepository.getEpisoderISesong(serieTittel,sesong);
-
-        context.json(episoderISesong);
-    }
-
-    public void getEpisode(Context context){
-        String serieTittel = context.pathParam("tvserie-id");
-        int sesong = Integer.parseInt(context.pathParam("sesong-nr"));
-        int episode = Integer.parseInt(context.pathParam("episode-nr"));
-
-        Episode ep = tvSerieRepository.getEpisode(serieTittel,sesong,episode);
-
-        context.json(ep);
-    }
 }
