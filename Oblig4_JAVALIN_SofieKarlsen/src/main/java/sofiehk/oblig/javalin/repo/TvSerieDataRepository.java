@@ -35,7 +35,7 @@ public class TvSerieDataRepository implements TvSerieRepository{
         for (int s =1; s < 3 ; s++) {
             for (int i = 1; i < 6; i++) {
                 String t = Integer.toString(i);
-                jjk.leggTilEpisode(new Episode("Episode " + t,"beskrivelse", i, s, random.nextInt(30 - 20) + 20));
+                jjk.leggTilEpisode(new Episode("Episode " + t,"beskrivelse", i, s, random.nextInt((30 - 20) + 20),LocalDate.of(2020,s,i),new Person("Gege Akutami","ukjent"), new ArrayList<Rolle>()));
             }
         }
 

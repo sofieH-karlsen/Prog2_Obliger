@@ -28,19 +28,6 @@ public abstract class Produksjon {
         this.regissor = regissor;
         this.rolleBesetning = rolleBesetning;
     }
-    public Produksjon(String tittel, String beskrivelse,int spilletid, LocalDate utgivelsedato, Person regissor) {
-        this.tittel = tittel;
-        this.beskrivelse = beskrivelse;
-        this.spilletid = spilletid;
-        this.utgivelsedato = utgivelsedato;
-        this.regissor = regissor;
-    }
-
-    public Produksjon(String tittel, String beskrivelse,int spilletid) {
-        this.tittel = tittel;
-        this.beskrivelse = beskrivelse;
-        this.spilletid = spilletid;
-    }
 
 
     public String getTittel() {
