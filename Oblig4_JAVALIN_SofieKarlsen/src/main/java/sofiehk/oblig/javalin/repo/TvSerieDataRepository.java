@@ -8,8 +8,13 @@ import java.util.Random;
 public class TvSerieDataRepository implements TvSerieRepository{
     private ArrayList<TvSerie> tvSerier = new ArrayList<>();
 
-    public TvSerieDataRepository() {
-        TvSerie csm = new TvSerie("Chainsaw Man","Denji is a young boy who works as a Devil Hunter with the “Chainsaw Devil” Pochita. One day he got betrayed and killed. As he was losing his consciousness, he made a deal with Pochita, and got resurrected as the “Chainsaw Man”: the owner of the Devil’s heart.", LocalDate.of(2022,10,12),new ArrayList<Episode>() );
+    public TvSerieDataRepository(){
+        createData();
+    };
+    public void createData() {
+        ArrayList<Episode> csmEp = new ArrayList<>();
+
+        TvSerie csm = new TvSerie("Chainsaw Man","Denji is a young boy who works as a Devil Hunter with the “Chainsaw Devil” Pochita. One day he got betrayed and killed. As he was losing his consciousness, he made a deal with Pochita, and got resurrected as the “Chainsaw Man”: the owner of the Devil’s heart.", LocalDate.of(2022,10,12),csmEp);
 
         Episode csmEp1 = new Episode("Dog & Chainsaw","Denji is a teenager who lives his life as a Devil Hunter, to pay off his fathers debt, with his buddy, the chainsaw devil Pochita. He gets betrayed and killed by the yakuza. As Denji starts passing out, he hears someone calling from inside his head...",
                 1, 1, 25,LocalDate.of(2022,10,11),
@@ -28,8 +33,9 @@ public class TvSerieDataRepository implements TvSerieRepository{
         csm.leggTilEpisode(csmEp2);
         csm.leggTilEpisode(csmEp3);
 
+        ArrayList<Episode> jjkEp = new ArrayList<>();
 
-        TvSerie jjk = new TvSerie("Jujutsu Kaisen","The heroic tale of a boy who became a curse to exorcise a curse, a life from which he could never turn back.",LocalDate.of(2020,10,3),new ArrayList<Episode>() );
+        TvSerie jjk = new TvSerie("Jujutsu Kaisen","The heroic tale of a boy who became a curse to exorcise a curse, a life from which he could never turn back.",LocalDate.of(2020,10,3),jjkEp);
 
         Random random = new Random();
         for (int s =1; s < 3 ; s++) {
@@ -38,6 +44,9 @@ public class TvSerieDataRepository implements TvSerieRepository{
                 jjk.leggTilEpisode(new Episode("Episode " + t,"beskrivelse", i, s, random.nextInt((30 - 20) + 20),LocalDate.of(2020,s,i),new Person("Gege Akutami","ukjent"), new ArrayList<Rolle>()));
             }
         }
+
+        tvSerier.add(csm);
+        tvSerier.add(jjk);
 
     }
 
@@ -49,7 +58,7 @@ public class TvSerieDataRepository implements TvSerieRepository{
     @Override
     public TvSerie getTvSerie(String serieTittel) {
         for (TvSerie serie : tvSerier) {
-            if (serie.getTittel().equals(serieTittel)){
+            if (serie.getTittel().equalsIgnoreCase(serieTittel)){
                 return serie;
             }
         }
