@@ -29,7 +29,7 @@ public class Person {
     }
 
     public void setEtternavn(String etternavn) {
-        this.etternavn = etternavn;
+        this.etternavn  = etternavn;
     }
 
     public String getFodselsAr() {
