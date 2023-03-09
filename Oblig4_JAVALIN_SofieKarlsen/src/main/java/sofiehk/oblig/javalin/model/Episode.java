@@ -8,8 +8,8 @@ public class Episode extends Produksjon implements Comparable<Episode>{
     private int sesongNr;
 
 
-    public Episode(String tittel, String beskrivelse, int episodeNr, int sesongNr, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning) {
-        super(tittel, beskrivelse, spilletid, utgivelsesdato, regissor, rolleBesetning);
+    public Episode(String tittel, String beskrivelse, int episodeNr, int sesongNr, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning, String bildeUrl) {
+        super(tittel, beskrivelse, spilletid, utgivelsesdato, regissor, rolleBesetning, bildeUrl);
 
         this.episodeNr = episodeNr;
         this.sesongNr = sesongNr;

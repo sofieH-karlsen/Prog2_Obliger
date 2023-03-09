@@ -16,13 +16,16 @@ public class TvSerie implements Comparable<TvSerie>{
 
     private int antallSesonger;
 
+    private String bildeUrl;
 
 
-    public TvSerie(String tittel, String beskrivelse, LocalDate utgivelsesdato, ArrayList episoder){
+
+    public TvSerie(String tittel, String beskrivelse, LocalDate utgivelsesdato, ArrayList episoder, String bildeUrl){
         this.tittel = tittel;
         this.beskrivelse = beskrivelse;
         this.utgivelsesdato = utgivelsesdato;
         this.episoder = episoder;
+        this.bildeUrl = bildeUrl;
     }
 
    public void leggTilEpisode(Episode episode){
@@ -119,6 +122,14 @@ public class TvSerie implements Comparable<TvSerie>{
 
     public int getAntallSesonger() {
         return antallSesonger;
+    }
+
+    public String getBildeUrl() {
+        return bildeUrl;
+    }
+
+    public void setBildeUrl(String bildeUrl) {
+        this.bildeUrl = bildeUrl;
     }
 
     @Override

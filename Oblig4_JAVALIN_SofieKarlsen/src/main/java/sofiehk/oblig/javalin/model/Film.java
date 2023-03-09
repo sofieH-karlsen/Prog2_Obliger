@@ -6,8 +6,8 @@ public class Film extends Produksjon {
 
 
     // Konstruktører
-    public Film(String tittel, String beskrivelse, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning) {
-        super(tittel, beskrivelse,spilletid,utgivelsesdato,regissor,rolleBesetning);
+    public Film(String tittel, String beskrivelse, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning, String bildeUrl) {
+        super(tittel, beskrivelse,spilletid,utgivelsesdato,regissor,rolleBesetning,bildeUrl);
     }
 
     @Override
