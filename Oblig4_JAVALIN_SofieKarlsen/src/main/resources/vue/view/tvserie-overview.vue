@@ -88,7 +88,7 @@ TvSerie:
         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
     }
 
-    img.cover-image-frontpage {
+    img.cover-image {
         height: auto;
         width: 100%;
         padding-bottom: 20px;
