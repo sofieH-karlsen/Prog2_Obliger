@@ -22,6 +22,7 @@ public class Application {
         app.get("/tvserie",new VueComponent("tvserie-overview"));
         app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}",new VueComponent("tvserie-detail"));
         app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}",new VueComponent("episode-detail"));
+        // Gjorde noen endringer i vue-filen så episodebeskrivelse ikke endte opp med og både være på siden og undr bildet
 
         TvSerieDataRepository tvSerieRepository = new TvSerieDataRepository();
         TvSerieController tvSerieController = new TvSerieController(tvSerieRepository);
