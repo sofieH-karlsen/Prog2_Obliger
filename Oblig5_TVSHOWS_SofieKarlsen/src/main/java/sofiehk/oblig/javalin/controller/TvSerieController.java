@@ -15,17 +15,13 @@ public class TvSerieController {
     }
 
     public void getAlleTvSerier(Context context){
-        ArrayList<TvSerie> alleTvSerier = tvSerieRepository.getAlleTvSerier();
-
-        context.json(alleTvSerier);
+        context.json(tvSerieRepository.getAlleTvSerier());
     }
 
     public void getTvSerie(Context context){
         String serieTittel = context.pathParam("tvserie-id");
 
-        TvSerie tvSerie = tvSerieRepository.getTvSerie(serieTittel);
-
-        context.json(tvSerie);
+        context.json(tvSerieRepository.getTvSerie(serieTittel));
     }
 
 

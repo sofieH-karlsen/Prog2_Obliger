@@ -27,7 +27,7 @@ public class EpisodeController {
             case "episodenr" -> episoderISesong.sort(new Comparator<Episode>() {
                 @Override
                 public int compare(Episode ep1, Episode ep2) {
-                    return ep1.getEpisodeNr() - ep2.getEpisodeNr();
+                    return ep1.getEpisodeNummer() - ep2.getEpisodeNummer();
                 }
             });
             case "tittel" -> episoderISesong.sort(new Comparator<Episode>() {

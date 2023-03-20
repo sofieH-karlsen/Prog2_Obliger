@@ -7,6 +7,7 @@ import io.javalin.vue.VueComponent;
 import sofiehk.oblig.javalin.controller.EpisodeController;
 import sofiehk.oblig.javalin.controller.TvSerieController;
 import sofiehk.oblig.javalin.repo.TvSerieDataRepository;
+import sofiehk.oblig.javalin.repo.TvSerieJSONRepository;
 
 
 public class Application {
@@ -25,7 +26,7 @@ public class Application {
         app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}",new VueComponent("episode-detail"));
         // Gjorde noen endringer i vue-filen så episodebeskrivelse ikke endte opp med og både være på siden og undr bildet
 
-        TvSerieDataRepository tvSerieRepository = new TvSerieDataRepository();
+        TvSerieJSONRepository tvSerieRepository = new TvSerieJSONRepository();
         TvSerieController tvSerieController = new TvSerieController(tvSerieRepository);
         EpisodeController episodeController = new EpisodeController(tvSerieRepository);
 
@@ -36,25 +37,10 @@ public class Application {
             }
         });
 
-        app.get("/api/tvserie/{tvserie-id}", new Handler() {
-            @Override
-            public void handle(Context context){
-                tvSerieController.getTvSerie(context);
-            }
-        });
+        app.get("/api/tvserie/{tvserie-id}", tvSerieController::getTvSerie);
 
-        app.get("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}", new Handler() {
-            @Override
-            public void handle(Context context){
-                episodeController.getEpisoderISesong(context);
-            }
-        });
+        app.get("api/tvserie/{tvserie-id}/sesong/{sesong-nr}", episodeController::getEpisoderISesong);
 
-        app.get("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}", new Handler() {
-            @Override
-            public void handle(Context context){
-                episodeController.getEpisode(context);
-            }
-        });
+        app.get("api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}", episodeController::getEpisode);
     }
 }

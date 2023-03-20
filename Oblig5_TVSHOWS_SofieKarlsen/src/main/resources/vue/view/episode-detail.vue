@@ -73,7 +73,7 @@ Episode:
        color:white;
     }
     div.detail-episode-container > p {
-        max-width: 50em;
+        max-width: 30em;
     }
     div.detail-episode-container{
       padding: 10px;

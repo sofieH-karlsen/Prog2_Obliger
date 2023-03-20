@@ -19,6 +19,8 @@ public class TvSerie implements Comparable<TvSerie>{
     private String bildeUrl;
 
 
+    public TvSerie() {
+    }
 
     public TvSerie(String tittel, String beskrivelse, LocalDate utgivelsesdato, ArrayList episoder, String bildeUrl){
         this.tittel = tittel;
@@ -30,15 +32,15 @@ public class TvSerie implements Comparable<TvSerie>{
 
    public void leggTilEpisode(Episode episode){
 
-       if (episode.getSesongNr() == antallSesonger + 1) {
+       if (episode.getSesongNummer() == antallSesonger + 1) {
            episoder.add(episode);
            oppdaterGjennomsnittligSpilletid(episode);
-           antallSesonger = episode.getSesongNr();
+           antallSesonger = episode.getSesongNummer();
        }
-       else if (episode.getSesongNr() <= 0) {
+       else if (episode.getSesongNummer() <= 0) {
            System.out.println("Er ikke mulig å registrere episoder med sesongNr null eller lavere");
        }
-       else if (episode.getSesongNr() <= antallSesonger) {
+       else if (episode.getSesongNummer() <= antallSesonger) {
            episoder.add(episode);
            oppdaterGjennomsnittligSpilletid(episode);
        }
@@ -50,12 +52,22 @@ public class TvSerie implements Comparable<TvSerie>{
     public ArrayList<Episode> hentEpisoderISesong(int sesong){
         ArrayList <Episode> episoderISesong = new ArrayList<>();
         for(Episode enEpisode : episoder){
-            if(enEpisode.getSesongNr() == sesong){
+            if(enEpisode.getSesongNummer() == sesong){
                 episoderISesong.add(enEpisode);
             }
         }
         return  episoderISesong;
     };
+
+    public Episode getEpisode(int sesongNr, int episodeNr) {
+        for (Episode episode : episoder) {
+            if (episode.getSesongNummer() == sesongNr && episode.getEpisodeNummer() == episodeNr)
+                return episode;
+        }
+
+        return null;
+
+    }
 
     private void oppdaterGjennomsnittligSpilletid(Episode ep){
         sumSpilletid += ep.getSpilletid();

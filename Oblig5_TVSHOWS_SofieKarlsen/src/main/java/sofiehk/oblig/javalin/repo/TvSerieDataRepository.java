@@ -96,7 +96,7 @@ public class TvSerieDataRepository implements TvSerieRepository{
 
     @Override
     public ArrayList<TvSerie> getAlleTvSerier() {
-       return tvSerier;
+       return new ArrayList<>(tvSerier);
     }
 
     @Override
@@ -111,26 +111,12 @@ public class TvSerieDataRepository implements TvSerieRepository{
 
     @Override
     public ArrayList<Episode> getEpisoderISesong(String serieTittel, int sesong) {
-        ArrayList<Episode> epISerie = getTvSerie(serieTittel).getEpisoder();
-        ArrayList<Episode> episoderISesong = new ArrayList<>();
+        return getTvSerie(serieTittel).hentEpisoderISesong(sesong);
 
-        for (Episode ep : epISerie){
-            if (ep.getSesongNr() == sesong){
-                episoderISesong.add(ep);
-            }
-        }
-        return episoderISesong;
     }
 
     @Override
     public Episode getEpisode(String serieTittel, int sesong, int episode) {
-        ArrayList<Episode> sesongEpisoder = getEpisoderISesong(serieTittel,sesong);
-
-        for (Episode ep : sesongEpisoder){
-            if (ep.getEpisodeNr() == episode){
-                return ep;
-            }
-        }
-        return null;
+        return getTvSerie(serieTittel).getEpisode(sesong,episode);
     }
 }

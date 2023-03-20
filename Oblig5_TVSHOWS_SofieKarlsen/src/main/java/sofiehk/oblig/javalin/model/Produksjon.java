@@ -21,6 +21,11 @@ public abstract class Produksjon {
     };
 
 // Konstruktører
+
+
+    public Produksjon() {
+    }
+
     public Produksjon(String tittel, String beskrivelse, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning, String bildeUrl) {
         this.tittel = tittel;
         this.beskrivelse = beskrivelse;

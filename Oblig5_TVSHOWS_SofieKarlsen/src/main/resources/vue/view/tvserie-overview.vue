@@ -71,7 +71,7 @@ TvSerie:
 
     div.single-tvserie-container{
         overflow: hidden;
-        width: 500px;
+        width: 300px;
         background-color: #000000;
         margin: 0 auto;
         opacity: 0.96;
@@ -87,7 +87,7 @@ TvSerie:
         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
     }
 
-    img.cover-image {
+    img.cover-image-frontpage {
         height: auto;
         width: 100%;
         padding-bottom: 20px;

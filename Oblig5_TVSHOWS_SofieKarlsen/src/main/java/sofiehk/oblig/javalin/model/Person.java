@@ -6,8 +6,10 @@ public class Person {
     private String fodselsAr;
 
 
+    public Person() {
+    }
 
-    public Person(String fornavn, String etternavn,String fodselsAr) {
+    public Person(String fornavn, String etternavn, String fodselsAr) {
         this.fornavn = fornavn;
         this.etternavn = etternavn;
         this.fodselsAr = fodselsAr;
@@ -28,6 +30,10 @@ public class Person {
     public void setEtternavn(String etternavn) {
         this.etternavn = etternavn;
     }
+
+    public String getFulltNavn(){
+        return fornavn + " " + etternavn;
+    };
 
     public String getFodselsAr() {
         return fodselsAr;
