@@ -1,22 +1,32 @@
 package sofiehk.oblig.javalin.model;
 
 public class Person {
-    private String fulltNavn;
+    private String fornavn;
+    private String etternavn;
     private String fodselsAr;
 
 
 
-    public Person(String fulltNavn,String fodselsAr) {
-        this.fulltNavn = fulltNavn;
+    public Person(String fornavn, String etternavn,String fodselsAr) {
+        this.fornavn = fornavn;
+        this.etternavn = etternavn;
         this.fodselsAr = fodselsAr;
     }
 
-    public String getFulltNavn() {
-        return fulltNavn;
+    public String getFornavn() {
+        return fornavn;
     }
 
-    public void setFulltNavn(String fulltNavn) {
-        this.fulltNavn = fulltNavn;
+    public void setFornavn(String fornavn) {
+        this.fornavn = fornavn;
+    }
+
+    public String getEtternavn() {
+        return etternavn;
+    }
+
+    public void setEtternavn(String etternavn) {
+        this.etternavn = etternavn;
     }
 
     public String getFodselsAr() {
@@ -27,8 +37,4 @@ public class Person {
         this.fodselsAr = fodselsAr;
     }
 
-    @Override
-    public String toString() {
-    return getFulltNavn()+"(f." + getFodselsAr() + ")";
-    }
 }

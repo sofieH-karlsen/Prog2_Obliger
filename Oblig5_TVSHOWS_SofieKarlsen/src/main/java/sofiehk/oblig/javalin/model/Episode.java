@@ -1,10 +1,14 @@
 package sofiehk.oblig.javalin.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Episode extends Produksjon implements Comparable<Episode>{
+    @JsonProperty("episodeNummer")
     private int episodeNr;
+    @JsonProperty("sesongNummer")
     private int sesongNr;
 
 
