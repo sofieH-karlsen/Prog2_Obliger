@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class TvSerieJSONRepository implements TvSerieRepository{
-    List<TvSerie> tvSerierJSON = new ArrayList<>(getData("src/main/resources/JSON/tvshows_10.json"));
+    List<TvSerie> tvSerierJSON = new ArrayList<>();
 
     public List<TvSerie> getData(String filepath){
         ObjectMapper objectMapper = new ObjectMapper();
@@ -28,6 +28,9 @@ public class TvSerieJSONRepository implements TvSerieRepository{
             return new ArrayList<>();
     };
 
+    public TvSerieJSONRepository(){
+        tvSerierJSON.addAll(getData("src/main/resources/JSON/tvshows_10.json"));
+    };
     @Override
     public ArrayList<TvSerie> getAlleTvSerier() {
         return new ArrayList<>(tvSerierJSON);
@@ -45,7 +48,15 @@ public class TvSerieJSONRepository implements TvSerieRepository{
 
     @Override
     public ArrayList<Episode> getEpisoderISesong(String serieTittel, int sesong) {
-        return getTvSerie(serieTittel).hentEpisoderISesong(sesong);
+        ArrayList<Episode> epISerie = getTvSerie(serieTittel).getEpisoder();
+        ArrayList<Episode> episoderISesong = new ArrayList<>();
+
+        for (Episode ep : epISerie){
+            if (ep.getSesongNummer() == sesong){
+                episoderISesong.add(ep);
+            }
+        }
+        return episoderISesong;
 
     }
 

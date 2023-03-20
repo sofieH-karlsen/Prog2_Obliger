@@ -9,16 +9,16 @@ import java.util.ArrayList;
 public class Episode extends Produksjon implements Comparable<Episode>{
     private int episodeNummer, sesongNummer;
 
-    public Episode(String tittel, String beskrivelse, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning, String bildeUrl) {
-        super(tittel, beskrivelse, spilletid, utgivelsesdato, regissor, rolleBesetning, bildeUrl);
+    public Episode() {
+
 
     }
 
-    public Episode(String tittel, String beskrivelse, int episodeNr, int sesongNr, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning, String bildeUrl) {
+    public Episode(String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning, String bildeUrl) {
         super(tittel, beskrivelse, spilletid, utgivelsesdato, regissor, rolleBesetning, bildeUrl);
 
-        this.episodeNummer = episodeNr;
-        this.sesongNummer = sesongNr;
+        this.episodeNummer = episodeNummer;
+        this.sesongNummer = sesongNummer;
     }
 
     @Override
@@ -43,8 +43,8 @@ public class Episode extends Produksjon implements Comparable<Episode>{
         return sesongNummer;
     }
 
-    public void setSesongNummer(int episodeNummer) {
-        this.episodeNummer = episodeNummer;
+    public void setSesongNummer(int sesongNummer) {
+        this.sesongNummer = sesongNummer;
     }
 
 

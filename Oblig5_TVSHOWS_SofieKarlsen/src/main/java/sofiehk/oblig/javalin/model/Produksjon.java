@@ -1,23 +1,31 @@
 package sofiehk.oblig.javalin.model;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+@JsonTypeInfo(use= JsonTypeInfo.Id.DEDUCTION)
+@JsonSubTypes({
+        @JsonSubTypes.Type(Film.class),
+        @JsonSubTypes.Type(Episode.class)
+})
 public abstract class Produksjon {
     private String tittel;
     private String beskrivelse;
     private int spilletid;
     private LocalDate utgivelsesdato;
     private Person regissor;
-    private ArrayList<Rolle> rolleBesetning;
+    private ArrayList<Rolle> rolleListe;
     private String bildeUrl;
 
     public void leggTilEnRolle(Rolle enRolle){
-        this.rolleBesetning.add(enRolle);
+        this.rolleListe.add(enRolle);
     };
 
     public void leggTilMangeRoller(ArrayList<Rolle> flereRoller){
-        this.rolleBesetning.addAll(flereRoller);
+        this.rolleListe.addAll(flereRoller);
     };
 
 // Konstruktører
@@ -26,16 +34,15 @@ public abstract class Produksjon {
     public Produksjon() {
     }
 
-    public Produksjon(String tittel, String beskrivelse, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleBesetning, String bildeUrl) {
+    public Produksjon(String tittel, String beskrivelse, int spilletid, LocalDate utgivelsesdato, Person regissor, ArrayList<Rolle> rolleListe, String bildeUrl) {
         this.tittel = tittel;
         this.beskrivelse = beskrivelse;
         this.spilletid = spilletid;
         this.utgivelsesdato = utgivelsesdato;
         this.regissor = regissor;
-        this.rolleBesetning = rolleBesetning;
+        this.rolleListe = rolleListe;
         this.bildeUrl = bildeUrl;
     }
-
 
     public String getTittel() {
         return tittel;
@@ -43,6 +50,14 @@ public abstract class Produksjon {
 
     public void setTittel(String tittel) {
         this.tittel = tittel;
+    }
+
+    public String getBeskrivelse() {
+        return beskrivelse;
+    }
+
+    public void setBeskrivelse(String beskrivelse) {
+        this.beskrivelse = beskrivelse;
     }
 
     public int getSpilletid() {
@@ -61,14 +76,6 @@ public abstract class Produksjon {
         this.utgivelsesdato = utgivelsesdato;
     }
 
-    public String getBeskrivelse() {
-        return beskrivelse;
-    }
-
-    public void setBeskrivelse(String beskrivelse) {
-        this.beskrivelse = beskrivelse;
-    }
-
     public Person getRegissor() {
         return regissor;
     }
@@ -77,12 +84,12 @@ public abstract class Produksjon {
         this.regissor = regissor;
     }
 
-    public ArrayList<Rolle> getRolleBesetning() {
-        return rolleBesetning;
+    public ArrayList<Rolle> getRolleListe() {
+        return rolleListe;
     }
 
-    public void setRolleBesetning(ArrayList<Rolle> rolleBesetning) {
-        this.rolleBesetning = rolleBesetning;
+    public void setRolleListe(ArrayList<Rolle> rolleListe) {
+        this.rolleListe = rolleListe;
     }
 
     public String getBildeUrl() {

@@ -2,9 +2,11 @@ package sofiehk.oblig.javalin.controller;
 
 import io.javalin.http.Context;
 import sofiehk.oblig.javalin.model.Episode;
+import sofiehk.oblig.javalin.model.Produksjon;
 import sofiehk.oblig.javalin.repo.TvSerieRepository;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Objects;
 
@@ -17,35 +19,21 @@ public class EpisodeController {
 
     public void getEpisoderISesong(Context context){
         String serieTittel = context.pathParam("tvserie-id");
-        int sesong = Integer.parseInt(context.pathParam("sesong-nr"));
+        String sesong = context.pathParam("sesong-nr");
         String sortering = context.queryParam("sortering");
 
-        ArrayList<Episode> episoderISesong = tvSerieRepository.getEpisoderISesong(serieTittel,sesong);
+        int sesongNr = sesong.isEmpty()? 1 : Integer.parseInt(sesong);
 
+        ArrayList<Episode> episoderISesong = tvSerieRepository.getEpisoderISesong(serieTittel,sesongNr);
 
+    if(sortering != null) {
         switch (sortering) {
-            case "episodenr" -> episoderISesong.sort(new Comparator<Episode>() {
-                @Override
-                public int compare(Episode ep1, Episode ep2) {
-                    return ep1.getEpisodeNummer() - ep2.getEpisodeNummer();
-                }
-            });
-            case "tittel" -> episoderISesong.sort(new Comparator<Episode>() {
-                @Override
-                public int compare(Episode ep1, Episode ep2) {
-                    return ep1.getTittel().compareTo(ep2.getTittel());
-                }
-            });
-            case "spilletid" -> episoderISesong.sort(new Comparator<Episode>() {
-                @Override
-                public int compare(Episode ep1, Episode ep2) {
-                    return ep1.getSpilletid() - ep2.getSpilletid();
-                }
-            });
+            case "episodenr" -> Collections.sort(episoderISesong);
+            case "tittel" -> episoderISesong.sort((e1, e2) -> e1.getTittel().compareTo(e2.getTittel()));
+            case "spilletid" -> episoderISesong.sort(Comparator.comparingInt(Produksjon::getSpilletid));
         }
-
-
-        context.json(episoderISesong);
+    }
+    context.json(episoderISesong);
 
 
     }

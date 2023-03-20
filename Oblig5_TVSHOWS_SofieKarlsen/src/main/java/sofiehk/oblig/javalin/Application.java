@@ -32,7 +32,7 @@ public class Application {
 
         app.get("/api/tvserie", new Handler() {
             @Override
-            public void handle(Context context) {
+            public void handle(Context context) throws Exception {
                 tvSerieController.getAlleTvSerier(context);
             }
         });

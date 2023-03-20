@@ -1,18 +1,20 @@
 package sofiehk.oblig.javalin.model;
 
+import java.time.LocalDate;
+
 public class Person {
     private String fornavn;
     private String etternavn;
-    private String fodselsAr;
+    private LocalDate fodselsDato;
 
 
     public Person() {
     }
 
-    public Person(String fornavn, String etternavn, String fodselsAr) {
+    public Person(String fornavn, String etternavn, LocalDate fodselsAr) {
         this.fornavn = fornavn;
         this.etternavn = etternavn;
-        this.fodselsAr = fodselsAr;
+        this.fodselsDato = fodselsAr;
     }
 
     public String getFornavn() {
@@ -35,12 +37,12 @@ public class Person {
         return fornavn + " " + etternavn;
     };
 
-    public String getFodselsAr() {
-        return fodselsAr;
+    public LocalDate getFodselsDato() {
+        return fodselsDato;
     }
 
-    public void setFodselsAr(String fodselsAr) {
-        this.fodselsAr = fodselsAr;
+    public void setFodselsDato(LocalDate fodselsDato) {
+        this.fodselsDato = fodselsDato;
     }
 
 }

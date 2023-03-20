@@ -82,7 +82,7 @@ public class TvSerie implements Comparable<TvSerie>{
     public ArrayList<Rolle> hentRollebesetning(){
         ArrayList <Rolle> karaktererISerie = new ArrayList<>();
         for(Episode enEpisode : episoder){
-            karaktererISerie.addAll(enEpisode.getRolleBesetning());
+            karaktererISerie.addAll(enEpisode.getRolleListe());
         }
 
         return  karaktererISerie;
@@ -117,23 +117,28 @@ public class TvSerie implements Comparable<TvSerie>{
         this.utgivelsesdato = utgivelsesdato;
     }
 
-    public ArrayList getEpisoder() {
+    public ArrayList<Episode> getEpisoder() {
         return episoder;
     }
 
-    public void setEpisoder(ArrayList episoder) {
+    public void setEpisoder(ArrayList<Episode> episoder) {
         this.episoder = episoder;
     }
 
     public String getGjennomsnittligSpilletid() {
         return gjennomsnittligSpilletid;
     }
-    public int getSumSpilletid() {
-        return sumSpilletid;
+
+    public void setGjennomsnittligSpilletid(String gjennomsnittligSpilletid) {
+        this.gjennomsnittligSpilletid = gjennomsnittligSpilletid;
     }
 
     public int getAntallSesonger() {
         return antallSesonger;
+    }
+
+    public void setAntallSesonger(int antallSesonger) {
+        this.antallSesonger = antallSesonger;
     }
 
     public String getBildeUrl() {
