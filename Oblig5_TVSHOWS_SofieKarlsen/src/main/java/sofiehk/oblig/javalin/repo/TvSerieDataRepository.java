@@ -128,4 +128,9 @@ public class TvSerieDataRepository implements TvSerieRepository{
     public Episode getEpisode(String serieTittel, int sesong, int episode) {
         return getTvSerie(serieTittel).getEpisode(sesong,episode);
     }
+
+    @Override
+    public void lesInnData() {
+       new TvSerieDataRepository();
+    }
 }

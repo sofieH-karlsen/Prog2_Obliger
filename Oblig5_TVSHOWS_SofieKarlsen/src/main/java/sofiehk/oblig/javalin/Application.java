@@ -26,6 +26,10 @@ public class Application {
         app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}",new VueComponent("episode-detail"));
         // Gjorde noen endringer i vue-filen så episodebeskrivelse ikke endte opp med og både være på siden og undr bildet
 
+        app.get("/tvserie/{tvserie-id}/createepisode",new VueComponent("episode-create"));
+        app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/updateepisode",new VueComponent("episode-update"));
+
+        // episode-create.vue episode-update.vue
         TvSerieJSONRepository tvSerieRepository = new TvSerieJSONRepository();
         TvSerieController tvSerieController = new TvSerieController(tvSerieRepository);
         EpisodeController episodeController = new EpisodeController(tvSerieRepository);

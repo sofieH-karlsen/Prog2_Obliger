@@ -1,5 +1,6 @@
 package sofiehk.oblig.javalin.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.jetbrains.annotations.NotNull;
 
@@ -21,6 +22,7 @@ public class Episode extends Produksjon implements Comparable<Episode>{
         this.sesongNummer = sesongNummer;
     }
 
+    @JsonIgnore
     @Override
     public int compareTo(Episode episoden) {
         if(this.sesongNummer - episoden.getSesongNummer() == 0){
@@ -50,7 +52,7 @@ public class Episode extends Produksjon implements Comparable<Episode>{
 
 
 
-
+    @JsonIgnore
     @Override
     public String toString() {
         return "E" + String.format("%02d", episodeNummer) + "S" + String.format("%02d", sesongNummer) + " - " + super.getTittel() + " - " + super.getSpilletid() + "min";

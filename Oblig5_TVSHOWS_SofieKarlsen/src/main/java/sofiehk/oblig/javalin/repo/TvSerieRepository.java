@@ -14,5 +14,6 @@ public interface TvSerieRepository {
 
     Episode getEpisode(String serieTittel, int sesong, int episode);
 
+    void lesInnData();
 
 }

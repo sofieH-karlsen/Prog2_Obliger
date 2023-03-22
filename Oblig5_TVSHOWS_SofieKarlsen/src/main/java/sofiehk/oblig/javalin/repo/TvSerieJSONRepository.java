@@ -7,7 +7,6 @@ import sofiehk.oblig.javalin.model.TvSerie;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,9 +26,21 @@ public class TvSerieJSONRepository implements TvSerieRepository{
         }
             return new ArrayList<>();
     };
+    public static void writeToJson(List<TvSerie> tvSeries, String filepath){
+        ObjectMapper objectMapper = new ObjectMapper();
+        File file = new File(filepath);
+
+        try {
+            objectMapper.registerModule(new JavaTimeModule());
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(file,tvSeries);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public TvSerieJSONRepository(){
-        tvSerierJSON.addAll(getData("src/main/resources/JSON/tvshows_10.json"));
+        tvSerierJSON.addAll(getData("src/main/resources/JSON/tvshows_10_with_roles.json"));
     };
     @Override
     public ArrayList<TvSerie> getAlleTvSerier() {
@@ -63,5 +74,10 @@ public class TvSerieJSONRepository implements TvSerieRepository{
     @Override
     public Episode getEpisode(String serieTittel, int sesong, int episode) {
         return getTvSerie(serieTittel).getEpisode(sesong,episode);
+    }
+
+    @Override
+    public void lesInnData() {
+
     }
 }

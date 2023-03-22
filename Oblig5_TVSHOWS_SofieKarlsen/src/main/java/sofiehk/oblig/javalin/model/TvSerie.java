@@ -1,5 +1,7 @@
 package sofiehk.oblig.javalin.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -30,6 +32,7 @@ public class TvSerie implements Comparable<TvSerie>{
         this.bildeUrl = bildeUrl;
     }
 
+    @JsonIgnore
    public void leggTilEpisode(Episode episode){
 
        if (episode.getSesongNummer() == antallSesonger + 1) {
@@ -49,6 +52,7 @@ public class TvSerie implements Comparable<TvSerie>{
        }
    }
 
+    @JsonIgnore
     public ArrayList<Episode> hentEpisoderISesong(int sesong){
         ArrayList <Episode> episoderISesong = new ArrayList<>();
         for(Episode enEpisode : episoder){
@@ -59,6 +63,7 @@ public class TvSerie implements Comparable<TvSerie>{
         return  episoderISesong;
     };
 
+    @JsonIgnore
     public Episode getEpisode(int sesongNr, int episodeNr) {
         for (Episode episode : episoder) {
             if (episode.getSesongNummer() == sesongNr && episode.getEpisodeNummer() == episodeNr)
@@ -69,6 +74,7 @@ public class TvSerie implements Comparable<TvSerie>{
 
     }
 
+    @JsonIgnore
     private void oppdaterGjennomsnittligSpilletid(Episode ep){
         sumSpilletid += ep.getSpilletid();
         gjennomsnittMinutter = sumSpilletid / episoder.size();
@@ -78,7 +84,7 @@ public class TvSerie implements Comparable<TvSerie>{
         // System.out.println("\n Episode: " + ep.getTittel() + "\n Spilletid: "+ ep.getSpilletid() + "\n Total serie spilletid: " + sumSpilletid + "\n Gjennomsnitt " + gjennomsnittligSpilletid);
     };
 
-
+    @JsonIgnore
     public ArrayList<Rolle> hentRollebesetning(){
         ArrayList <Rolle> karaktererISerie = new ArrayList<>();
         for(Episode enEpisode : episoder){
@@ -88,6 +94,7 @@ public class TvSerie implements Comparable<TvSerie>{
         return  karaktererISerie;
     };
 
+    @JsonIgnore
     @Override
     public int compareTo(TvSerie serien) {
         return this.tittel.compareTo(serien.getTittel());
@@ -149,6 +156,7 @@ public class TvSerie implements Comparable<TvSerie>{
         this.bildeUrl = bildeUrl;
     }
 
+    @JsonIgnore
     @Override
     public String toString(){
         return "\n" + tittel + "\n" + beskrivelse + "\n Utgitt: " + utgivelsesdato + "\n";

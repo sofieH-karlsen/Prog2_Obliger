@@ -1,5 +1,7 @@
 package sofiehk.oblig.javalin.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDate;
 
 public class Person {
@@ -33,6 +35,7 @@ public class Person {
         this.etternavn = etternavn;
     }
 
+    @JsonIgnore
     public String getFulltNavn(){
         return fornavn + " " + etternavn;
     };
