@@ -6,6 +6,7 @@ import io.javalin.http.Handler;
 import io.javalin.vue.VueComponent;
 import sofiehk.oblig.javalin.controller.EpisodeController;
 import sofiehk.oblig.javalin.controller.TvSerieController;
+import sofiehk.oblig.javalin.repo.TvSerieCSVRepository;
 import sofiehk.oblig.javalin.repo.TvSerieDataRepository;
 import sofiehk.oblig.javalin.repo.TvSerieJSONRepository;
 
@@ -30,7 +31,7 @@ public class Application {
         app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/updateepisode",new VueComponent("episode-update"));
 
         // episode-create.vue episode-update.vue
-        TvSerieJSONRepository tvSerieRepository = new TvSerieJSONRepository();
+        TvSerieCSVRepository tvSerieRepository = new TvSerieCSVRepository();
         TvSerieController tvSerieController = new TvSerieController(tvSerieRepository);
         EpisodeController episodeController = new EpisodeController(tvSerieRepository);
 

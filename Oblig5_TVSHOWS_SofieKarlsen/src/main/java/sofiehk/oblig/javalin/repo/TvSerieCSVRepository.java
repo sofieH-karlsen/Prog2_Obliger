@@ -4,17 +4,15 @@ import sofiehk.oblig.javalin.model.Episode;
 import sofiehk.oblig.javalin.model.Person;
 import sofiehk.oblig.javalin.model.TvSerie;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
-public class TvSerieCSVRepository {
-    
+public class TvSerieCSVRepository implements TvSerieRepository{
+
     HashMap<Integer,TvSerie> tvSerieHashMap = new HashMap<>();
 
     public static ArrayList<TvSerie> readFromCSVFile(String filepath, String separator) {
@@ -96,6 +94,20 @@ public class TvSerieCSVRepository {
 
         return series;
     }
+    private static void writeToCSVFile (List<TvSerie> tvserier, String filePath, String separator){
+        //logikk til å skrive over til CSV
+        // er inni try slik at det lukker seg automatisk når ferdig, uansett om feil eller ikke
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))){
+            for (TvSerie serie: tvserier) {
+                bufferedWriter.write(
+                        
+                        //hero.getName() + separator + hero.getAlterego());
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+    }
 
 
 
@@ -104,5 +116,44 @@ public class TvSerieCSVRepository {
         for (int i=1; i< tvSerieArrayList.size();i++){
             tvSerieHashMap.put(i,tvSerieArrayList.get(i-1));
         }
+    }
+
+    @Override
+    public ArrayList<TvSerie> getAlleTvSerier() {
+        return new ArrayList<TvSerie>(tvSerieHashMap.values());
+    }
+
+    @Override
+    public TvSerie getTvSerie(String serieTittel) {
+        ArrayList<TvSerie> serieArrayList = new ArrayList<>(tvSerieHashMap.values());
+        for (TvSerie serie : serieArrayList) {
+            if (serie.getTittel().equalsIgnoreCase(serieTittel)){
+                return serie;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public ArrayList<Episode> getEpisoderISesong(String serieTittel, int sesong) {
+        ArrayList<Episode> epISerie = getTvSerie(serieTittel).getEpisoder();
+        ArrayList<Episode> episoderISesong = new ArrayList<>();
+
+        for (Episode ep : epISerie){
+            if (ep.getSesongNummer() == sesong){
+                episoderISesong.add(ep);
+            }
+        }
+        return episoderISesong;
+    }
+
+    @Override
+    public Episode getEpisode(String serieTittel, int sesong, int episode) {
+        return getTvSerie(serieTittel).getEpisode(sesong,episode);
+    }
+
+    @Override
+    public void lesInnData() {
+
     }
 }
