@@ -3,10 +3,12 @@ package sofiehk.oblig.javalin.repo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import sofiehk.oblig.javalin.model.Episode;
+import sofiehk.oblig.javalin.model.Person;
 import sofiehk.oblig.javalin.model.TvSerie;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -43,8 +45,8 @@ public class TvSerieJSONRepository implements TvSerieRepository{
         tvSerierJSON.addAll(getData("src/main/resources/JSON/tvshows_10_with_roles.json"));
     };
     @Override
-    public ArrayList<TvSerie> getAlleTvSerier() {
-        return new ArrayList<>(tvSerierJSON);
+    public List<TvSerie> getAlleTvSerier() {
+        return tvSerierJSON;
     }
 
     @Override
@@ -59,15 +61,7 @@ public class TvSerieJSONRepository implements TvSerieRepository{
 
     @Override
     public ArrayList<Episode> getEpisoderISesong(String serieTittel, int sesong) {
-        ArrayList<Episode> epISerie = getTvSerie(serieTittel).getEpisoder();
-        ArrayList<Episode> episoderISesong = new ArrayList<>();
-
-        for (Episode ep : epISerie){
-            if (ep.getSesongNummer() == sesong){
-                episoderISesong.add(ep);
-            }
-        }
-        return episoderISesong;
+        return getTvSerie(serieTittel).hentEpisoderISesong(sesong);
 
     }
 
@@ -77,7 +71,30 @@ public class TvSerieJSONRepository implements TvSerieRepository{
     }
 
     @Override
-    public void lesInnData() {
+    public void lesDataIgjen() {
+        tvSerierJSON.addAll(getData("src/main/resources/JSON/tvshows_10_with_roles.json"));
+
+    }
+
+    @Override
+    public Episode newEpisode(String serieTittel, String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid,LocalDate utgivelsesdato, String bildeUrl) {
+        Episode ep = new Episode(tittel,beskrivelse,episodeNummer,sesongNummer,spilletid,utgivelsesdato,new Person(),new ArrayList<>(),bildeUrl);
+        getTvSerie(serieTittel).leggTilEpisode(ep);
+        writeToJson(tvSerierJSON, "src/main/resources/JSON/tvshows_10_with_roles.json");
+        return ep;
+    }
+
+    @Override
+    public void updateEpisode() {
+
+    }
+
+    @Override
+    public Episode deleteEpisode(String serieTittel, int sesong, int episode) {
+        Episode ep = getEpisode(serieTittel,sesong,episode);
+        getTvSerie(serieTittel).getEpisoder().remove(ep);
+        writeToJson(tvSerierJSON, "src/main/resources/JSON/tvshows_10_with_roles.json");
+        return ep;
 
     }
 }

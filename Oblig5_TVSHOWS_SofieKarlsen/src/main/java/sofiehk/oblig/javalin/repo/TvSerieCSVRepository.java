@@ -8,6 +8,7 @@ import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -94,11 +95,11 @@ public class TvSerieCSVRepository implements TvSerieRepository{
 
         return series;
     }
-    private static void writeToCSVFile (List<TvSerie> tvserier, String filePath, String separator){
+    private static void writeToCSVFile (HashMap<Integer,TvSerie> tvserier, String filePath, String separator){
         //logikk til å skrive over til CSV
         // er inni try slik at det lukker seg automatisk når ferdig, uansett om feil eller ikke
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))){
-            for (TvSerie serie: tvserier) {
+            for (TvSerie serie: tvserier.values()) {
                 for(Episode ep :serie.getEpisoder()){
                 bufferedWriter.write(
                         serie.getTittel() + separator + serie.getBeskrivelse() + separator + serie.getUtgivelsesdato() + separator + serie.getBildeUrl() + separator + ep.getTittel() + separator + ep.getBeskrivelse() + separator + ep.getEpisodeNummer() + separator + ep.getSesongNummer() + separator + ep.getSpilletid() + separator + ep.getUtgivelsesdato() + separator + ep.getBildeUrl() + separator + ep.getRegissor().getFornavn() + separator + ep.getRegissor().getEtternavn() + separator + ep.getRegissor().getFodselsDato());
@@ -120,14 +121,13 @@ public class TvSerieCSVRepository implements TvSerieRepository{
     }
 
     @Override
-    public ArrayList<TvSerie> getAlleTvSerier() {
-        return new ArrayList<TvSerie>(tvSerieHashMap.values());
+    public Collection<TvSerie> getAlleTvSerier() {
+        return tvSerieHashMap.values();
     }
 
     @Override
     public TvSerie getTvSerie(String serieTittel) {
-        ArrayList<TvSerie> serieArrayList = new ArrayList<>(tvSerieHashMap.values());
-        for (TvSerie serie : serieArrayList) {
+        for (TvSerie serie : tvSerieHashMap.values()) {
             if (serie.getTittel().equalsIgnoreCase(serieTittel)){
                 return serie;
             }
@@ -137,15 +137,7 @@ public class TvSerieCSVRepository implements TvSerieRepository{
 
     @Override
     public ArrayList<Episode> getEpisoderISesong(String serieTittel, int sesong) {
-        ArrayList<Episode> epISerie = getTvSerie(serieTittel).getEpisoder();
-        ArrayList<Episode> episoderISesong = new ArrayList<>();
-
-        for (Episode ep : epISerie){
-            if (ep.getSesongNummer() == sesong){
-                episoderISesong.add(ep);
-            }
-        }
-        return episoderISesong;
+        return getTvSerie(serieTittel).hentEpisoderISesong(sesong);
     }
 
     @Override
@@ -154,7 +146,26 @@ public class TvSerieCSVRepository implements TvSerieRepository{
     }
 
     @Override
-    public void lesInnData() {
+    public void lesDataIgjen() {
 
+    }
+
+    @Override
+    public Episode newEpisode(String serieTittel, String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid,LocalDate utgivelsesdato, String bildeUrl) {
+        Episode ep = new Episode(tittel,beskrivelse,episodeNummer,sesongNummer,spilletid,utgivelsesdato,new Person(),new ArrayList<>(),bildeUrl);
+        getTvSerie(serieTittel).leggTilEpisode(ep);
+        return ep;
+    }
+
+    @Override
+    public void updateEpisode() {
+
+    }
+
+    @Override
+    public Episode deleteEpisode(String serieTittel, int sesong, int episode) {
+        getTvSerie(serieTittel).getEpisoder().remove(getEpisode(serieTittel,sesong,episode));
+        writeToCSVFile(tvSerieHashMap,"src/main/resources/CSV/tvshows_10.csv",";");
+        return getTvSerie(serieTittel).getEpisode(sesong,episode);
     }
 }

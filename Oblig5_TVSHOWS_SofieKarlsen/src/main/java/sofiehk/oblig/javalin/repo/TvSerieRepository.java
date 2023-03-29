@@ -3,10 +3,12 @@ package sofiehk.oblig.javalin.repo;
 import sofiehk.oblig.javalin.model.Episode;
 import sofiehk.oblig.javalin.model.TvSerie;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public interface TvSerieRepository {
-    ArrayList<TvSerie> getAlleTvSerier();
+    Collection<TvSerie> getAlleTvSerier();
 
     TvSerie getTvSerie(String serieTittel);
 
@@ -14,6 +16,12 @@ public interface TvSerieRepository {
 
     Episode getEpisode(String serieTittel, int sesong, int episode);
 
-    void lesInnData();
+    void lesDataIgjen ();
+
+    Episode newEpisode(String serieTittel, String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid, LocalDate utgivelsesdato, String bildeUrl);
+
+    void updateEpisode();
+
+    Episode deleteEpisode(String serieTittel, int sesong, int episode);
 
 }

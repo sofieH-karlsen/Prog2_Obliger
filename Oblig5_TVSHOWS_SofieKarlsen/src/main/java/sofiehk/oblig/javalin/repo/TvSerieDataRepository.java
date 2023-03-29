@@ -130,7 +130,25 @@ public class TvSerieDataRepository implements TvSerieRepository{
     }
 
     @Override
-    public void lesInnData() {
-       new TvSerieDataRepository();
+    public void lesDataIgjen() {
+
+    }
+
+    @Override
+    public Episode newEpisode(String serieTittel, String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid,LocalDate utgivelsesdato, String bildeUrl) {
+        Episode ep = new Episode(tittel,beskrivelse,episodeNummer,sesongNummer,spilletid,utgivelsesdato,new Person(),new ArrayList<>(),bildeUrl);
+        getTvSerie(serieTittel).leggTilEpisode(ep);
+        return ep;
+    }
+
+    @Override
+    public void updateEpisode() {
+
+    }
+
+    @Override
+    public Episode deleteEpisode(String serieTittel, int sesong, int episode) {
+        getEpisoderISesong(serieTittel,sesong).remove(getEpisode(serieTittel,sesong,episode));
+        return getTvSerie(serieTittel).getEpisode(sesong,episode);
     }
 }

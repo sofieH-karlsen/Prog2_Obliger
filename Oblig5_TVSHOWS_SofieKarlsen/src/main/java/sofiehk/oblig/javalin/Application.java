@@ -31,7 +31,7 @@ public class Application {
         app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/updateepisode",new VueComponent("episode-update"));
 
 
-        TvSerieCSVRepository tvSerieRepository = new TvSerieCSVRepository();
+        TvSerieJSONRepository tvSerieRepository = new TvSerieJSONRepository();
         TvSerieController tvSerieController = new TvSerieController(tvSerieRepository);
         EpisodeController episodeController = new EpisodeController(tvSerieRepository);
 
@@ -47,5 +47,9 @@ public class Application {
         app.get("api/tvserie/{tvserie-id}/sesong/{sesong-nr}", episodeController::getEpisoderISesong);
 
         app.get("api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}", episodeController::getEpisode);
+
+        app.get("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/deleteepisode",episodeController::deleteEpisode);
+
+        app.post("/api/tvserie/{tvserie-id}/createepisode",episodeController::newEpisode);
     }
 }
