@@ -20,8 +20,10 @@ public interface TvSerieRepository {
 
     Episode newEpisode(String serieTittel, String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid, LocalDate utgivelsesdato, String bildeUrl);
 
-    void updateEpisode();
+    Episode updateEpisode(String serieTittel, int sesong, int episode, String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid,LocalDate utgivelsesdato, String bildeUrl);
 
     Episode deleteEpisode(String serieTittel, int sesong, int episode);
+
+    void updateAntallSesonger(String serieTittel);
 
 }

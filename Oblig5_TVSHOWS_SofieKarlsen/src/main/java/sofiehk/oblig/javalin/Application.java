@@ -4,6 +4,7 @@ import io.javalin.Javalin;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
 import io.javalin.vue.VueComponent;
+import org.jetbrains.annotations.NotNull;
 import sofiehk.oblig.javalin.controller.EpisodeController;
 import sofiehk.oblig.javalin.controller.TvSerieController;
 import sofiehk.oblig.javalin.repo.TvSerieCSVRepository;
@@ -51,5 +52,25 @@ public class Application {
         app.get("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/deleteepisode",episodeController::deleteEpisode);
 
         app.post("/api/tvserie/{tvserie-id}/createepisode",episodeController::newEpisode);
+
+        app.post("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/updateepisode", episodeController::updateEpisode);
+         
+        /*
+        app.post("/api/tvserie/{tvserie-id}/createepisode", new Handler() {
+            @Override
+            public void handle(@NotNull Context context) throws Exception {
+                episodeController.newEpisode(context);
+                context.redirect("/tvserie/{tvserie-id}/sesong/{sesong-nr}");
+            }
+        });
+        app.post("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/updateepisode", new Handler() {
+            @Override
+            public void handle(@NotNull Context context) throws Exception {
+                episodeController.updateEpisode(context);
+                context.redirect("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}");
+            }
+        });
+        */
+
     }
 }

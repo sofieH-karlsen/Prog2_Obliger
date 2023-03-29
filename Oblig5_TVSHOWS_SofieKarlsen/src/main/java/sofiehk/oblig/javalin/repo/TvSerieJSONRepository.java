@@ -77,7 +77,7 @@ public class TvSerieJSONRepository implements TvSerieRepository{
     }
 
     @Override
-    public Episode newEpisode(String serieTittel, String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid,LocalDate utgivelsesdato, String bildeUrl) {
+    public Episode newEpisode(String serieTittel,String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid,LocalDate utgivelsesdato, String bildeUrl) {
         Episode ep = new Episode(tittel,beskrivelse,episodeNummer,sesongNummer,spilletid,utgivelsesdato,new Person(),new ArrayList<>(),bildeUrl);
         getTvSerie(serieTittel).leggTilEpisode(ep);
         writeToJson(tvSerierJSON, "src/main/resources/JSON/tvshows_10_with_roles.json");
@@ -85,14 +85,38 @@ public class TvSerieJSONRepository implements TvSerieRepository{
     }
 
     @Override
-    public void updateEpisode() {
+    public void updateAntallSesonger(String serieTittel) {
+        ArrayList<Episode> episoder = getTvSerie(serieTittel).getEpisoder();
+        int sesonger = 1;
+        for(Episode ep : episoder){
+            if(ep.getSesongNummer() > sesonger){
+                sesonger = ep.getSesongNummer();
+            }
+        }
+        getTvSerie(serieTittel).setAntallSesonger(sesonger);
+    }
 
+    @Override
+    public Episode updateEpisode(String serieTittel, int sesong, int episode, String tittel, String beskrivelse, int episodeNummer, int sesongNummer, int spilletid,LocalDate utgivelsesdato, String bildeUrl) {
+        Episode ep = getTvSerie(serieTittel).getEpisode(sesong,episode);
+        ep.setTittel(tittel);
+        ep.setBeskrivelse(beskrivelse);
+        ep.setEpisodeNummer(episodeNummer);
+        ep.setSesongNummer(sesongNummer);
+        ep.setSpilletid(spilletid);
+        ep.setUtgivelsesdato(utgivelsesdato);
+        ep.setBildeUrl(bildeUrl);
+
+        updateAntallSesonger(serieTittel);
+        writeToJson(tvSerierJSON, "src/main/resources/JSON/tvshows_10_with_roles.json");
+        return ep;
     }
 
     @Override
     public Episode deleteEpisode(String serieTittel, int sesong, int episode) {
         Episode ep = getEpisode(serieTittel,sesong,episode);
         getTvSerie(serieTittel).getEpisoder().remove(ep);
+        updateAntallSesonger(serieTittel);
         writeToJson(tvSerierJSON, "src/main/resources/JSON/tvshows_10_with_roles.json");
         return ep;
 

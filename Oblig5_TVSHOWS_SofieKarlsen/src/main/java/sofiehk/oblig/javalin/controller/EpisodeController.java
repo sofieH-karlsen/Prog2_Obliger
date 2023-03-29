@@ -77,4 +77,21 @@ public class EpisodeController {
     context.json(ep);
     }
 
+    public void updateEpisode(Context context) {
+        String serieTittel = context.pathParam("tvserie-id");
+        int sesong = Integer.parseInt(context.pathParam("sesong-nr"));
+        int episode = Integer.parseInt(context.pathParam("episode-nr"));
+
+        String tittel = context.formParam("tittel");
+        String beskrivelse = context.formParam("beskrivelse");
+        int episodeNummer = Integer.parseInt(Objects.requireNonNull(context.formParam("episodeNummer")));
+        int sesongNummer = Integer.parseInt(Objects.requireNonNull(context.formParam("sesongNummer")));
+        int spilletid = Integer.parseInt(Objects.requireNonNull(context.formParam("spilletid")));
+        LocalDate utgivelsesdato = LocalDate.parse(Objects.requireNonNull(context.formParam("utgivelsesdato")),formatter);
+        String bildeUrl = context.formParam("bildeUrl");
+
+        Episode ep = tvSerieRepository.updateEpisode(serieTittel, sesong, episode,tittel, beskrivelse, episodeNummer, sesongNummer, spilletid, utgivelsesdato, bildeUrl);
+        context.json(ep);
+    }
+
 }

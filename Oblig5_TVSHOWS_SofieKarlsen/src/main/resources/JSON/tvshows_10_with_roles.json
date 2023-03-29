@@ -5,7 +5,7 @@
   "episoder" : [ {
     "tittel" : "When You're Lost in the Darkness",
     "beskrivelse" : "2003. As a parasitic fungal outbreak begins to ravage the country and the world, Joel Miller attempts to escape the escalating chaos with his daughter and brother. Twenty years later, a now hardened Joel and his partner Tess fight to survive under a totalitarian regime, while the insurgent Fireflies harbor a teenage girl with a unique gift.",
-    "spilletid" : 81,
+    "spilletid" : 84,
     "utgivelsesdato" : [ 2023, 1, 16 ],
     "regissor" : {
       "fornavn" : "Jeremy",
@@ -61,6 +61,36 @@
     } ],
     "bildeUrl" : "https://image.tmdb.org/t/p/w500/vGf7chl6XL7o3yYc8A5m3kjz8px.jpg",
     "episodeNummer" : 2,
+    "sesongNummer" : 1
+  }, {
+    "tittel" : "Long, Long Time",
+    "beskrivelse" : "Doomsday prepper Bill prepares to ride out the apocalypse alone...until a mysterious stranger upends his plans. Years later, Joel and Ellie seek Bill's guidance – and find themselves at a crossroads.",
+    "spilletid" : 77,
+    "utgivelsesdato" : [ 2023, 1, 30 ],
+    "regissor" : {
+      "fornavn" : "Jeremy",
+      "etternavn" : "Webb",
+      "fodselsDato" : [ 2023, 3, 13 ]
+    },
+    "rolleListe" : [ {
+      "rolleFornavn" : "Joel",
+      "rolleEtternavn" : "Miller",
+      "skuespiller" : {
+        "fornavn" : "Pedro",
+        "etternavn" : "Pascal",
+        "fodselsDato" : [ -999999999, 1, 1 ]
+      }
+    }, {
+      "rolleFornavn" : "Ellie",
+      "rolleEtternavn" : "Williams",
+      "skuespiller" : {
+        "fornavn" : "Bella",
+        "etternavn" : "Ramsey",
+        "fodselsDato" : [ -999999999, 1, 1 ]
+      }
+    } ],
+    "bildeUrl" : "https://image.tmdb.org/t/p/w500/bzy4hAtkY3OOInY4q6MJigLmC1m.jpg",
+    "episodeNummer" : 3,
     "sesongNummer" : 1
   }, {
     "tittel" : "Please Hold to My Hand",
@@ -244,20 +274,20 @@
     "sesongNummer" : 1
   }, {
     "tittel" : "Test",
-    "beskrivelse" : "TESTER",
-    "spilletid" : 1,
-    "utgivelsesdato" : [ 2023, 9, 25 ],
+    "beskrivelse" : "ggg",
+    "spilletid" : 89,
+    "utgivelsesdato" : [ 2023, 11, 23 ],
     "regissor" : {
       "fornavn" : null,
       "etternavn" : null,
       "fodselsDato" : null
     },
     "rolleListe" : [ ],
-    "bildeUrl" : "https://dragesetvarehus.no/wp-content/uploads/2023/01/23455654-14720.jpg",
-    "episodeNummer" : 1,
-    "sesongNummer" : 1
+    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
+    "episodeNummer" : 3,
+    "sesongNummer" : 2
   } ],
-  "gjennomsnittligSpilletid" : "2 minutter og 0.0 sekunder",
+  "gjennomsnittligSpilletid" : "8 minutter og 54.0 sekunder",
   "antallSesonger" : 2,
   "bildeUrl" : "https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg"
 }, {
