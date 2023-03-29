@@ -99,10 +99,11 @@ public class TvSerieCSVRepository implements TvSerieRepository{
         // er inni try slik at det lukker seg automatisk når ferdig, uansett om feil eller ikke
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))){
             for (TvSerie serie: tvserier) {
+                for(Episode ep :serie.getEpisoder()){
                 bufferedWriter.write(
-                        
-                        //hero.getName() + separator + hero.getAlterego());
+                        serie.getTittel() + separator + serie.getBeskrivelse() + separator + serie.getUtgivelsesdato() + separator + serie.getBildeUrl() + separator + ep.getTittel() + separator + ep.getBeskrivelse() + separator + ep.getEpisodeNummer() + separator + ep.getSesongNummer() + separator + ep.getSpilletid() + separator + ep.getUtgivelsesdato() + separator + ep.getBildeUrl() + separator + ep.getRegissor().getFornavn() + separator + ep.getRegissor().getEtternavn() + separator + ep.getRegissor().getFodselsDato());
                 bufferedWriter.newLine();
+                }
             }
         } catch (IOException e) {
             System.err.println(e.getMessage());

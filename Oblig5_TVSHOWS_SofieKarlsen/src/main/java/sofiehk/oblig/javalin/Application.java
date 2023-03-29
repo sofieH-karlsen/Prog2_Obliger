@@ -30,7 +30,7 @@ public class Application {
         app.get("/tvserie/{tvserie-id}/createepisode",new VueComponent("episode-create"));
         app.get("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/updateepisode",new VueComponent("episode-update"));
 
-        // episode-create.vue episode-update.vue
+
         TvSerieCSVRepository tvSerieRepository = new TvSerieCSVRepository();
         TvSerieController tvSerieController = new TvSerieController(tvSerieRepository);
         EpisodeController episodeController = new EpisodeController(tvSerieRepository);
