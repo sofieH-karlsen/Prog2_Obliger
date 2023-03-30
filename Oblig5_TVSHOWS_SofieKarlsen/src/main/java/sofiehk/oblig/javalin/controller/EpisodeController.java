@@ -75,6 +75,9 @@ public class EpisodeController {
 
     Episode ep = tvSerieRepository.newEpisode(serieTittel,tittel, beskrivelse, episodeNummer, sesongNummer, spilletid, utgivelsesdato, bildeUrl);
     context.json(ep);
+
+    String location = String.format("/tvserie/%s/sesong/%d", serieTittel, sesongNummer);
+    context.redirect(location);
     }
 
     public void updateEpisode(Context context) {
@@ -92,6 +95,9 @@ public class EpisodeController {
 
         Episode ep = tvSerieRepository.updateEpisode(serieTittel, sesong, episode,tittel, beskrivelse, episodeNummer, sesongNummer, spilletid, utgivelsesdato, bildeUrl);
         context.json(ep);
+
+        String location = String.format("/tvserie/%s/sesong/%d/episode/%d", serieTittel, sesongNummer, episodeNummer);
+        context.redirect(location);
     }
 
 }

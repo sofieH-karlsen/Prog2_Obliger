@@ -272,23 +272,9 @@
     "bildeUrl" : "https://image.tmdb.org/t/p/w500/qFouIBgN3Jgba7LnuRmkTAohh07.jpg",
     "episodeNummer" : 9,
     "sesongNummer" : 1
-  }, {
-    "tittel" : "Test",
-    "beskrivelse" : "ggg",
-    "spilletid" : 89,
-    "utgivelsesdato" : [ 2023, 11, 23 ],
-    "regissor" : {
-      "fornavn" : null,
-      "etternavn" : null,
-      "fodselsDato" : null
-    },
-    "rolleListe" : [ ],
-    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
-    "episodeNummer" : 3,
-    "sesongNummer" : 2
   } ],
   "gjennomsnittligSpilletid" : "8 minutter og 54.0 sekunder",
-  "antallSesonger" : 2,
+  "antallSesonger" : 1,
   "bildeUrl" : "https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg"
 }, {
   "tittel" : "Family Guy",
@@ -22326,8 +22312,64 @@
     "bildeUrl" : "https://image.tmdb.org/t/p/w500null",
     "episodeNummer" : 20,
     "sesongNummer" : 21
+  }, {
+    "tittel" : "TESTER",
+    "beskrivelse" : "ee",
+    "spilletid" : 34,
+    "utgivelsesdato" : [ 2023, 11, 24 ],
+    "regissor" : {
+      "fornavn" : null,
+      "etternavn" : null,
+      "fodselsDato" : null
+    },
+    "rolleListe" : [ ],
+    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
+    "episodeNummer" : 10,
+    "sesongNummer" : 2
+  }, {
+    "tittel" : "e",
+    "beskrivelse" : "ee",
+    "spilletid" : 34,
+    "utgivelsesdato" : [ 2023, 12, 12 ],
+    "regissor" : {
+      "fornavn" : null,
+      "etternavn" : null,
+      "fodselsDato" : null
+    },
+    "rolleListe" : [ ],
+    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
+    "episodeNummer" : 11,
+    "sesongNummer" : 2
+  }, {
+    "tittel" : "tester",
+    "beskrivelse" : "f",
+    "spilletid" : 34,
+    "utgivelsesdato" : [ 2000, 9, 25 ],
+    "regissor" : {
+      "fornavn" : null,
+      "etternavn" : null,
+      "fodselsDato" : null
+    },
+    "rolleListe" : [ ],
+    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
+    "episodeNummer" : 12,
+    "sesongNummer" : 1
+  }, {
+    "tittel" : "tester",
+    "beskrivelse" : "ee",
+    "spilletid" : 45,
+    "utgivelsesdato" : [ 2004, 9, 22 ],
+    "regissor" : {
+      "fornavn" : null,
+      "etternavn" : null,
+      "fodselsDato" : null
+    },
+    "rolleListe" : [ ],
+    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
+    "episodeNummer" : 22,
+    "sesongNummer" : 16
   } ],
-  "gjennomsnittligSpilletid" : null,
+  "gjennomsnittligSpilletid" : "0 minutter og 11.0 sekunder",
   "antallSesonger" : 21,
   "bildeUrl" : "https://image.tmdb.org/t/p/w300/aLB7psB9N81n5GecHNOudXWW3AI.jpg"
 }, {

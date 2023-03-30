@@ -54,23 +54,7 @@ public class Application {
         app.post("/api/tvserie/{tvserie-id}/createepisode",episodeController::newEpisode);
 
         app.post("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/updateepisode", episodeController::updateEpisode);
-         
-        /*
-        app.post("/api/tvserie/{tvserie-id}/createepisode", new Handler() {
-            @Override
-            public void handle(@NotNull Context context) throws Exception {
-                episodeController.newEpisode(context);
-                context.redirect("/tvserie/{tvserie-id}/sesong/{sesong-nr}");
-            }
-        });
-        app.post("/api/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}/updateepisode", new Handler() {
-            @Override
-            public void handle(@NotNull Context context) throws Exception {
-                episodeController.updateEpisode(context);
-                context.redirect("/tvserie/{tvserie-id}/sesong/{sesong-nr}/episode/{episode-nr}");
-            }
-        });
-        */
+
 
     }
 }
