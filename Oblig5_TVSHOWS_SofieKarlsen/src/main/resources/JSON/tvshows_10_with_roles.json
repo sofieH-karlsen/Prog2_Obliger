@@ -1,11 +1,12 @@
 [ {
   "tittel" : "The Last of Us",
   "beskrivelse" : "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg",
   "utgivelsesdato" : [ 2023, 1, 16 ],
   "episoder" : [ {
     "tittel" : "When You're Lost in the Darkness",
     "beskrivelse" : "2003. As a parasitic fungal outbreak begins to ravage the country and the world, Joel Miller attempts to escape the escalating chaos with his daughter and brother. Twenty years later, a now hardened Joel and his partner Tess fight to survive under a totalitarian regime, while the insurgent Fireflies harbor a teenage girl with a unique gift.",
-    "spilletid" : 84,
+    "spilletid" : 81,
     "utgivelsesdato" : [ 2023, 1, 16 ],
     "regissor" : {
       "fornavn" : "Jeremy",
@@ -273,12 +274,11 @@
     "episodeNummer" : 9,
     "sesongNummer" : 1
   } ],
-  "gjennomsnittligSpilletid" : "8 minutter og 54.0 sekunder",
-  "antallSesonger" : 1,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg"
+  "antallSesonger" : 1
 }, {
   "tittel" : "Family Guy",
   "beskrivelse" : "Sick, twisted, politically incorrect and Freakin' Sweet animated series featuring the adventures of the dysfunctional Griffin family. Bumbling Peter and long-suffering Lois have three kids. Stewie (a brilliant but sadistic baby bent on killing his mother and taking over the world), Meg (the oldest, and is the most unpopular girl in town) and Chris (the middle kid, he's not very bright but has a passion for movies). The final member of the family is Brian - a talking dog and much more than a pet, he keeps Stewie in check whilst sipping Martinis and sorting through his own life issues.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/aLB7psB9N81n5GecHNOudXWW3AI.jpg",
   "utgivelsesdato" : [ 1999, 2, 1 ],
   "episoder" : [ {
     "tittel" : "Death Has a Shadow",
@@ -22312,69 +22312,12 @@
     "bildeUrl" : "https://image.tmdb.org/t/p/w500null",
     "episodeNummer" : 20,
     "sesongNummer" : 21
-  }, {
-    "tittel" : "TESTER",
-    "beskrivelse" : "ee",
-    "spilletid" : 34,
-    "utgivelsesdato" : [ 2023, 11, 24 ],
-    "regissor" : {
-      "fornavn" : null,
-      "etternavn" : null,
-      "fodselsDato" : null
-    },
-    "rolleListe" : [ ],
-    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
-    "episodeNummer" : 10,
-    "sesongNummer" : 2
-  }, {
-    "tittel" : "e",
-    "beskrivelse" : "ee",
-    "spilletid" : 34,
-    "utgivelsesdato" : [ 2023, 12, 12 ],
-    "regissor" : {
-      "fornavn" : null,
-      "etternavn" : null,
-      "fodselsDato" : null
-    },
-    "rolleListe" : [ ],
-    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
-    "episodeNummer" : 11,
-    "sesongNummer" : 2
-  }, {
-    "tittel" : "tester",
-    "beskrivelse" : "f",
-    "spilletid" : 34,
-    "utgivelsesdato" : [ 2000, 9, 25 ],
-    "regissor" : {
-      "fornavn" : null,
-      "etternavn" : null,
-      "fodselsDato" : null
-    },
-    "rolleListe" : [ ],
-    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
-    "episodeNummer" : 12,
-    "sesongNummer" : 1
-  }, {
-    "tittel" : "tester",
-    "beskrivelse" : "ee",
-    "spilletid" : 45,
-    "utgivelsesdato" : [ 2004, 9, 22 ],
-    "regissor" : {
-      "fornavn" : null,
-      "etternavn" : null,
-      "fodselsDato" : null
-    },
-    "rolleListe" : [ ],
-    "bildeUrl" : "https://nrkbeta.no/wp-content/uploads/2022/10/anarkistix_a_photorealistic_frog_with_sun_glasses_8cc27800-c626-4ec9-a36d-660f41869c01-2-620x620.png",
-    "episodeNummer" : 22,
-    "sesongNummer" : 16
   } ],
-  "gjennomsnittligSpilletid" : "0 minutter og 11.0 sekunder",
-  "antallSesonger" : 21,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/aLB7psB9N81n5GecHNOudXWW3AI.jpg"
+  "antallSesonger" : 21
 }, {
   "tittel" : "The Big Bang Theory",
   "beskrivelse" : "The sitcom is centered on five characters living in Pasadena, California: roommates Leonard Hofstadter and Sheldon Cooper; Penny, a waitress and aspiring actress who lives across the hall; and Leonard and Sheldon's equally geeky and socially awkward friends and co-workers, mechanical engineer Howard Wolowitz and astrophysicist Raj Koothrappali. The geekiness and intellect of the four guys is contrasted for comic effect with Penny's social skills and common sense.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg",
   "utgivelsesdato" : [ 2007, 9, 25 ],
   "episoder" : [ {
     "tittel" : "Pilot",
@@ -41907,12 +41850,11 @@
     "episodeNummer" : 24,
     "sesongNummer" : 12
   } ],
-  "gjennomsnittligSpilletid" : null,
-  "antallSesonger" : 12,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg"
+  "antallSesonger" : 12
 }, {
   "tittel" : "Black Mirror",
   "beskrivelse" : "A contemporary British re-working of The Twilight Zone with stories that tap into the collective unease about our modern world. Over the last ten years, technology has transformed almost every aspect of our lives before we've had time to stop and question it. In every home; on every desk; in every palm - a plasma screen; a monitor; a smartphone - a black mirror of our 21st Century existence.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/7PRddO7z7mcPi21nZTCMGShAyy1.jpg",
   "utgivelsesdato" : [ 2011, 12, 4 ],
   "episoder" : [ {
     "tittel" : "The National Anthem",
@@ -42209,12 +42151,11 @@
     "episodeNummer" : 3,
     "sesongNummer" : 5
   } ],
-  "gjennomsnittligSpilletid" : null,
-  "antallSesonger" : 5,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/7PRddO7z7mcPi21nZTCMGShAyy1.jpg"
+  "antallSesonger" : 5
 }, {
   "tittel" : "Modern Family",
   "beskrivelse" : "The Pritchett-Dunphy-Tucker clan is a wonderfully large and blended family. They give us an honest and often hilarious look into the sometimes warm, sometimes twisted, embrace of the modern family.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/fu5vEUHgxkAPmX26ISQXqHmlPMq.jpg",
   "utgivelsesdato" : [ 2009, 9, 24 ],
   "episoder" : [ {
     "tittel" : "Pilot",
@@ -71717,12 +71658,11 @@
     "episodeNummer" : 18,
     "sesongNummer" : 11
   } ],
-  "gjennomsnittligSpilletid" : null,
-  "antallSesonger" : 11,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/fu5vEUHgxkAPmX26ISQXqHmlPMq.jpg"
+  "antallSesonger" : 11
 }, {
   "tittel" : "Stranger Things",
   "beskrivelse" : "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
   "utgivelsesdato" : [ 2016, 7, 15 ],
   "episoder" : [ {
     "tittel" : "Chapter One: The Vanishing of Will Byers",
@@ -77369,12 +77309,11 @@
     "episodeNummer" : 9,
     "sesongNummer" : 4
   } ],
-  "gjennomsnittligSpilletid" : null,
-  "antallSesonger" : 4,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
+  "antallSesonger" : 4
 }, {
   "tittel" : "The Mandalorian",
   "beskrivelse" : "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/eU1i6eHXlzMOlEq0ku1Rzq7Y4wA.jpg",
   "utgivelsesdato" : [ 2019, 11, 12 ],
   "episoder" : [ {
     "tittel" : "Chapter 1: The Mandalorian",
@@ -78097,12 +78036,11 @@
     "episodeNummer" : 8,
     "sesongNummer" : 3
   } ],
-  "gjennomsnittligSpilletid" : null,
-  "antallSesonger" : 3,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/eU1i6eHXlzMOlEq0ku1Rzq7Y4wA.jpg"
+  "antallSesonger" : 3
 }, {
   "tittel" : "Breaking Bad",
   "beskrivelse" : "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
   "utgivelsesdato" : [ 2008, 1, 21 ],
   "episoder" : [ {
     "tittel" : "Pilot",
@@ -83437,12 +83375,11 @@
     "episodeNummer" : 16,
     "sesongNummer" : 5
   } ],
-  "gjennomsnittligSpilletid" : null,
-  "antallSesonger" : 5,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/ggFHVNu6YYI5L9pCfOacjizRGt.jpg"
+  "antallSesonger" : 5
 }, {
   "tittel" : "You",
   "beskrivelse" : "A dangerously charming, intensely obsessive young man goes to extreme measures to insert himself into the lives of those he is transfixed by.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/7bEYwjUvlJW7GerM8GYmqwl4oS3.jpg",
   "utgivelsesdato" : [ 2018, 9, 9 ],
   "episoder" : [ {
     "tittel" : "Pilot",
@@ -90405,12 +90342,11 @@
     "episodeNummer" : 10,
     "sesongNummer" : 4
   } ],
-  "gjennomsnittligSpilletid" : null,
-  "antallSesonger" : 4,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/7bEYwjUvlJW7GerM8GYmqwl4oS3.jpg"
+  "antallSesonger" : 4
 }, {
   "tittel" : "Game of Thrones",
   "beskrivelse" : "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+  "bildeUrl" : "https://image.tmdb.org/t/p/w300/7WUHnWGx5OO145IRxPDUkQSh4C7.jpg",
   "utgivelsesdato" : [ 2011, 4, 18 ],
   "episoder" : [ {
     "tittel" : "Winter Is Coming",
@@ -116547,7 +116483,5 @@
     "episodeNummer" : 6,
     "sesongNummer" : 8
   } ],
-  "gjennomsnittligSpilletid" : null,
-  "antallSesonger" : 8,
-  "bildeUrl" : "https://image.tmdb.org/t/p/w300/7WUHnWGx5OO145IRxPDUkQSh4C7.jpg"
+  "antallSesonger" : 8
 } ]

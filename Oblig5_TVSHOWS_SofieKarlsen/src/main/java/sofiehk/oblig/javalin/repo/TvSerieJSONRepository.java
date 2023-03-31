@@ -42,7 +42,7 @@ public class TvSerieJSONRepository implements TvSerieRepository{
 
 
     public TvSerieJSONRepository(){
-        tvSerierJSON.addAll(getData("src/main/resources/JSON/tvshows_10_with_roles.json"));
+        tvSerierJSON.addAll(getData("src/main/resources/JSON/tvshows_10.json"));
     };
     @Override
     public List<TvSerie> getAlleTvSerier() {
