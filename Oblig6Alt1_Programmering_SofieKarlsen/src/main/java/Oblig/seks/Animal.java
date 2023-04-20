@@ -21,7 +21,7 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return name + "\n age: " + age + " year old " + "\nHas a/an " + dietType + " diet, a favorite is " + favoriteFood +"\nSpeed is " + calculateSpeed() + " km/h";
+        return "\n"+getClass().getSimpleName() + " - " + name + "\nage: " + age + " year(s) old " + "\nHas a(n) " + dietType + " diet, a favorite is " + favoriteFood +"\nSpeed is " + calculateSpeed() + " km/h\n";
     }
 
     public String getName() {

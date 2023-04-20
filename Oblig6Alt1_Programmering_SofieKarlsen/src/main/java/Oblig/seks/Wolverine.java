@@ -9,6 +9,6 @@ public class Wolverine extends Animal{
     @Override
     public double calculateSpeed() {
         double maxSpeed = 48.28;
-        return Math.min(maxSpeed,getAge() * 40);
+        return Math.min(maxSpeed,getAge() * 20);
     }
 }

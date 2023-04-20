@@ -11,6 +11,6 @@ public class LeastWeasel extends Animal{
     @Override
     public double calculateSpeed() {
         double maxSpeed = 24.14;
-        return Math.min(maxSpeed,getAge() * 20);
+        return Math.min(maxSpeed,getAge() * 10);
     }
 }

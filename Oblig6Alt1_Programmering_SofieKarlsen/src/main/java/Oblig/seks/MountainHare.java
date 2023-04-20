@@ -8,6 +8,6 @@ public class MountainHare extends  Animal{
     @Override
     public double calculateSpeed() {
         double maxSpeed = 72.42;
-        return Math.min(maxSpeed,getAge() * 50);
+        return Math.min(maxSpeed,getAge() * 25);
     }
 }

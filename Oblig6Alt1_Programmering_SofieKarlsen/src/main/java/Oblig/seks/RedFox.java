@@ -9,6 +9,6 @@ public class RedFox extends Animal{
     @Override
     public double calculateSpeed() {
         double maxSpeed = 50.0;
-        return Math.min(maxSpeed,getAge() * 40);
+        return Math.min(maxSpeed,getAge() * 20);
     }
 }

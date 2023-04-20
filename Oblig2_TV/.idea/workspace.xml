@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e2dcd41-bc64-41f0-855f-4403cf0466d6" name="Changes" comment="" />
+    <list default="true" id="8e2dcd41-bc64-41f0-855f-4403cf0466d6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/LeastWeasel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/LeastWeasel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/MountainHare.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/MountainHare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/RedFox.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/RedFox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/Wolverine.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Oblig6Alt1_Programmering_SofieKarlsen/src/main/java/Oblig/seks/Wolverine.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +31,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/sofie/Code/HiØ/2023Vår/Prog2Obliger/Oblig2_TV"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
