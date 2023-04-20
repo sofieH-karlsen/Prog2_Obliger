@@ -5,6 +5,7 @@ public class MountainHare extends  Animal{
         super(name, dietType, favoriteFood, age);
     }
 
+
     @Override
     public double calculateSpeed() {
         double maxSpeed = 72.42;

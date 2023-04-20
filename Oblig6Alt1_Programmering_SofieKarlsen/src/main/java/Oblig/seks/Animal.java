@@ -16,6 +16,8 @@ public abstract class Animal {
         this.favoriteFood = favoriteFood;
         this.age = age;
     }
+    public Animal(){
+    }
 
     public abstract double calculateSpeed();
 
